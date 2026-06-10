@@ -1,4 +1,7 @@
 # rank.py scaffold
 def load_candidates(path):
-    with open(path, "r") as f:
-        return json.load(f)
+    pass
+
+def detect_honeypots_v1(candidates):
+    # career impossibility and timeline overlap checks
+    pass
