@@ -2,9 +2,9 @@
 def load_candidates(path):
     pass
 
-def detect_honeypots_v1(candidates):
+def stage1_rule_scorer(candidates):
     pass
 
-def stage1_rule_scorer(candidates):
-    # YOE, location, open_to_work fast filter
+def retrieve_bm25(candidates, query):
+    # rank_bm25 on career descriptions
     pass
