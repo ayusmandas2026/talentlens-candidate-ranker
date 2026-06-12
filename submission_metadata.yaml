@@ -1,0 +1,71 @@
+# Redrob Hackathon — Submission Metadata
+# The fields here should match what you submit via the portal at upload time.
+
+# ============================================================================
+# Team identity
+# ============================================================================
+team_name: "Antigravity Recruiter"  # Update with your registered team name
+
+primary_contact:
+  name: "Participant Name"
+  email: "participant@example.com"   # Used for all organizer communication
+  phone: "+91-XXXXXXXXXX"        # Used for top-50 / top-10 outreach
+
+team_members:
+  - name: "Participant Name"
+    email: "participant@example.com"
+    role: "ML Engineer"
+  # Add more members as needed; solo participants list just one member
+
+# ============================================================================
+# Code and reproducibility
+# ============================================================================
+github_repo: "https://github.com/YOUR_USERNAME/redrob-candidate-ranker"
+# Must be reachable. Private repos OK if you can grant organizer access at Stage 3.
+
+sandbox_link: "https://huggingface.co/spaces/YOUR_USERNAME/redrob-candidate-ranker"
+# A working hosted environment where the ranker can be run on a small candidate sample.
+
+reproduce_command: "python rank.py --candidates ./Dataset/candidates.jsonl --out ./team_submission.csv"
+# The single command that produces team_submission.csv from candidates.jsonl.
+# Runs end-to-end within 1 minute on CPU with 16GB RAM and no network.
+
+# ============================================================================
+# Compute environment
+# ============================================================================
+compute:
+  platform: "Local PC"
+  cpu_cores: 4
+  ram_gb: 16
+  python_version: "3.11"
+  os: "Windows / Linux"
+  uses_gpu_for_inference: false                 # Must be false
+  has_network_during_ranking: false             # Must be false
+  pre_computation_required: false               # Runs end-to-end dynamically
+  pre_computation_time_minutes: 0               # No precomputation required
+
+# ============================================================================
+# AI tools declaration
+# ============================================================================
+ai_tools_used:
+  - "Gemini"
+  - "Claude"
+
+ai_usage_summary: |
+  Used Gemini and Claude for architectural discussion, code structure optimization, regex acceleration, and drafting reasoning templates. No candidate data was sent to any external LLM APIs during ranking execution.
+
+# ============================================================================
+# Approach summary
+# ============================================================================
+methodology_summary: |
+  Two-stage hybrid ranking system. Stage 1 applies a regex-based keyword matching heuristic to filter and score 100K candidates down to the top 1000 in under 30 seconds. Stage 2 runs a local Sentence-Transformers model to compute cosine similarity against the JD, combined with YOE decay, hybrid location alignment, notice period scores, and behavioral signal multipliers. Completes in under 1 minute on CPU.
+
+# ============================================================================
+# Declarations
+# ============================================================================
+declarations:
+  read_submission_spec: true        # I have read submission_spec.md in full
+  code_is_original_work: true       # My code is my team's original work
+  no_collusion: true                # I have not coordinated my submission with other teams
+  honeypot_check_done: true         # Set true since we explicitly blacklisted honeypots
+  reproduction_tested: true         # I have tested that my reproduce_command runs end-to-end
