@@ -1,4 +1,4 @@
 # rank.py scaffold
-def detect_honeypots_v2(candidates):
-    # skill fraud (expert + 0 months), YOE inflation, impossible date overlaps
+def generate_candidate_reasoning(candidate):
+    # grounded 1-2 sentence per candidate
     pass
