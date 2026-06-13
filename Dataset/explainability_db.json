@@ -1,0 +1,2193 @@
+{
+  "CAND_0018499": {
+    "strengths": [
+      "Ideal experience range (7.2 YOE)",
+      "Strong semantic job description match",
+      "Location matches hybrid hub (Noida/Pune)",
+      "Short notice period (15 days)",
+      "Demonstrated production deployment experience",
+      "High coverage of core required AI skills",
+      "Exceptional platform behavioral signals"
+    ],
+    "weaknesses": [
+      "No critical concerns detected"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.69,
+      "Skill Coverage Score": 0.637,
+      "Production Score": 0.95,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.879,
+      "Experience Score": 1.0,
+      "Education Score": 1.0,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0055905": {
+    "strengths": [
+      "Ideal experience range (8.1 YOE)",
+      "Strong semantic job description match",
+      "Short notice period (30 days)",
+      "Demonstrated production deployment experience",
+      "High coverage of core required AI skills",
+      "Exceptional platform behavioral signals"
+    ],
+    "weaknesses": [
+      "Relocation required or remote compatibility gap"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.678,
+      "Skill Coverage Score": 0.662,
+      "Production Score": 0.95,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.74,
+      "Experience Score": 1.0,
+      "Education Score": 1.0,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0081846": {
+    "strengths": [
+      "Ideal experience range (6.7 YOE)",
+      "Strong semantic job description match",
+      "Short notice period (30 days)",
+      "Demonstrated production deployment experience",
+      "Exceptional platform behavioral signals"
+    ],
+    "weaknesses": [
+      "Relocation required or remote compatibility gap"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.646,
+      "Skill Coverage Score": 0.576,
+      "Production Score": 1.0,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.798,
+      "Experience Score": 1.0,
+      "Education Score": 1.0,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0005260": {
+    "strengths": [
+      "Ideal experience range (5.2 YOE)",
+      "Strong semantic job description match",
+      "Location matches hybrid hub (Noida/Pune)",
+      "Demonstrated production deployment experience"
+    ],
+    "weaknesses": [
+      "No critical concerns detected"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.705,
+      "Skill Coverage Score": 0.578,
+      "Production Score": 0.95,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.634,
+      "Experience Score": 1.0,
+      "Education Score": 1.0,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0077337": {
+    "strengths": [
+      "Ideal experience range (7.0 YOE)",
+      "Strong semantic job description match",
+      "Demonstrated production deployment experience",
+      "Exceptional platform behavioral signals"
+    ],
+    "weaknesses": [
+      "Relocation required or remote compatibility gap"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.677,
+      "Skill Coverage Score": 0.52,
+      "Production Score": 0.95,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.832,
+      "Experience Score": 1.0,
+      "Education Score": 1.0,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0008425": {
+    "strengths": [
+      "Ideal experience range (7.8 YOE)",
+      "Strong semantic job description match",
+      "Demonstrated production deployment experience",
+      "Exceptional platform behavioral signals"
+    ],
+    "weaknesses": [
+      "Relocation required or remote compatibility gap",
+      "Long notice period (90 days)"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.672,
+      "Skill Coverage Score": 0.535,
+      "Production Score": 1.0,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.74,
+      "Experience Score": 1.0,
+      "Education Score": 1.0,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0000031": {
+    "strengths": [
+      "Ideal experience range (6.0 YOE)",
+      "Strong semantic job description match",
+      "Location matches hybrid hub (Noida/Pune)",
+      "Demonstrated production deployment experience",
+      "Exceptional platform behavioral signals"
+    ],
+    "weaknesses": [
+      "No critical concerns detected"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.625,
+      "Skill Coverage Score": 0.585,
+      "Production Score": 1.0,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.742,
+      "Experience Score": 1.0,
+      "Education Score": 0.8,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0005649": {
+    "strengths": [
+      "Ideal experience range (7.4 YOE)",
+      "Strong semantic job description match",
+      "Location matches hybrid hub (Noida/Pune)",
+      "Demonstrated production deployment experience",
+      "Exceptional platform behavioral signals"
+    ],
+    "weaknesses": [
+      "Long notice period (90 days)"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.623,
+      "Skill Coverage Score": 0.535,
+      "Production Score": 1.0,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.794,
+      "Experience Score": 1.0,
+      "Education Score": 0.8,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0071974": {
+    "strengths": [
+      "Ideal experience range (7.8 YOE)",
+      "Strong semantic job description match",
+      "Demonstrated production deployment experience",
+      "Exceptional platform behavioral signals"
+    ],
+    "weaknesses": [
+      "Relocation required or remote compatibility gap"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.64,
+      "Skill Coverage Score": 0.562,
+      "Production Score": 0.8,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.876,
+      "Experience Score": 1.0,
+      "Education Score": 1.0,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0061265": {
+    "strengths": [
+      "Ideal experience range (6.6 YOE)",
+      "Strong semantic job description match",
+      "Demonstrated production deployment experience",
+      "Exceptional platform behavioral signals"
+    ],
+    "weaknesses": [
+      "Relocation required or remote compatibility gap",
+      "Long notice period (120 days)",
+      "Missing skills: retrieval, ranking, evaluation, python"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.623,
+      "Skill Coverage Score": 0.435,
+      "Production Score": 1.0,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.863,
+      "Experience Score": 1.0,
+      "Education Score": 1.0,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0065195": {
+    "strengths": [
+      "Ideal experience range (5.1 YOE)",
+      "Strong semantic job description match",
+      "Demonstrated production deployment experience",
+      "Exceptional platform behavioral signals"
+    ],
+    "weaknesses": [
+      "Relocation required or remote compatibility gap",
+      "Missing skills: embeddings, retrieval, ranking, evaluation"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.668,
+      "Skill Coverage Score": 0.4,
+      "Production Score": 0.95,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.836,
+      "Experience Score": 1.0,
+      "Education Score": 1.0,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0024620": {
+    "strengths": [
+      "Ideal experience range (5.9 YOE)",
+      "Strong semantic job description match",
+      "Demonstrated production deployment experience"
+    ],
+    "weaknesses": [
+      "Relocation required or remote compatibility gap"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.631,
+      "Skill Coverage Score": 0.535,
+      "Production Score": 1.0,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.691,
+      "Experience Score": 1.0,
+      "Education Score": 0.8,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0049538": {
+    "strengths": [
+      "Ideal experience range (5.8 YOE)",
+      "Strong semantic job description match",
+      "Short notice period (30 days)",
+      "Demonstrated production deployment experience"
+    ],
+    "weaknesses": [
+      "Relocation required or remote compatibility gap"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.61,
+      "Skill Coverage Score": 0.527,
+      "Production Score": 1.0,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.655,
+      "Experience Score": 1.0,
+      "Education Score": 1.0,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0011162": {
+    "strengths": [
+      "Ideal experience range (5.8 YOE)",
+      "Strong semantic job description match",
+      "Demonstrated production deployment experience",
+      "Exceptional platform behavioral signals"
+    ],
+    "weaknesses": [
+      "Relocation required or remote compatibility gap",
+      "Long notice period (90 days)"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.567,
+      "Skill Coverage Score": 0.535,
+      "Production Score": 1.0,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.746,
+      "Experience Score": 1.0,
+      "Education Score": 1.0,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0002025": {
+    "strengths": [
+      "Ideal experience range (5.9 YOE)",
+      "Strong semantic job description match",
+      "Short notice period (30 days)",
+      "Demonstrated production deployment experience",
+      "Exceptional platform behavioral signals"
+    ],
+    "weaknesses": [
+      "Relocation required or remote compatibility gap",
+      "Missing skills: embeddings, retrieval, ranking, evaluation"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.724,
+      "Skill Coverage Score": 0.37,
+      "Production Score": 0.8,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.898,
+      "Experience Score": 1.0,
+      "Education Score": 1.0,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0028793": {
+    "strengths": [
+      "Ideal experience range (7.2 YOE)",
+      "Strong semantic job description match",
+      "Demonstrated production deployment experience",
+      "Exceptional platform behavioral signals"
+    ],
+    "weaknesses": [
+      "Relocation required or remote compatibility gap",
+      "Long notice period (120 days)",
+      "Missing skills: ranking, evaluation, vector database, search"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.597,
+      "Skill Coverage Score": 0.481,
+      "Production Score": 0.95,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.829,
+      "Experience Score": 1.0,
+      "Education Score": 1.0,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0086022": {
+    "strengths": [
+      "Ideal experience range (5.3 YOE)",
+      "Strong semantic job description match",
+      "Location matches hybrid hub (Noida/Pune)",
+      "Short notice period (0 days)",
+      "Demonstrated production deployment experience",
+      "Exceptional platform behavioral signals"
+    ],
+    "weaknesses": [
+      "No critical concerns detected"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.71,
+      "Skill Coverage Score": 0.52,
+      "Production Score": 0.7,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.783,
+      "Experience Score": 1.0,
+      "Education Score": 1.0,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0083307": {
+    "strengths": [
+      "Ideal experience range (7.8 YOE)",
+      "Strong semantic job description match",
+      "Demonstrated production deployment experience",
+      "Exceptional platform behavioral signals"
+    ],
+    "weaknesses": [
+      "Relocation required or remote compatibility gap",
+      "Long notice period (120 days)"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.574,
+      "Skill Coverage Score": 0.535,
+      "Production Score": 1.0,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.782,
+      "Experience Score": 1.0,
+      "Education Score": 0.8,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0046064": {
+    "strengths": [
+      "Ideal experience range (8.9 YOE)",
+      "Strong semantic job description match",
+      "Short notice period (30 days)",
+      "Demonstrated production deployment experience",
+      "Exceptional platform behavioral signals"
+    ],
+    "weaknesses": [
+      "Relocation required or remote compatibility gap",
+      "Missing skills: embeddings, retrieval, ranking, evaluation",
+      "Security/consistency flags detected: TIMELINE_INCONSISTENCY"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.73,
+      "Skill Coverage Score": 0.37,
+      "Production Score": 1.0,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.824,
+      "Experience Score": 1.0,
+      "Education Score": 1.0,
+      "Honeypot Penalty": 0.3
+    }
+  },
+  "CAND_0088025": {
+    "strengths": [
+      "Ideal experience range (8.6 YOE)",
+      "Strong semantic job description match",
+      "Demonstrated production deployment experience",
+      "Exceptional platform behavioral signals"
+    ],
+    "weaknesses": [
+      "Relocation required or remote compatibility gap",
+      "Long notice period (90 days)",
+      "Missing skills: embeddings, retrieval, ranking, evaluation"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.677,
+      "Skill Coverage Score": 0.366,
+      "Production Score": 0.95,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.848,
+      "Experience Score": 1.0,
+      "Education Score": 0.8,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0041610": {
+    "strengths": [
+      "Ideal experience range (6.7 YOE)",
+      "Strong semantic job description match",
+      "Short notice period (30 days)",
+      "Demonstrated production deployment experience",
+      "Exceptional platform behavioral signals"
+    ],
+    "weaknesses": [
+      "Relocation required or remote compatibility gap"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.599,
+      "Skill Coverage Score": 0.512,
+      "Production Score": 1.0,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.709,
+      "Experience Score": 1.0,
+      "Education Score": 0.8,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0070398": {
+    "strengths": [
+      "Ideal experience range (7.2 YOE)",
+      "Demonstrated production deployment experience",
+      "High coverage of core required AI skills"
+    ],
+    "weaknesses": [
+      "Relocation required or remote compatibility gap",
+      "Long notice period (120 days)"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.498,
+      "Skill Coverage Score": 0.685,
+      "Production Score": 0.9,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.698,
+      "Experience Score": 1.0,
+      "Education Score": 1.0,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0018549": {
+    "strengths": [
+      "Ideal experience range (6.8 YOE)",
+      "Strong semantic job description match",
+      "Demonstrated production deployment experience",
+      "Exceptional platform behavioral signals"
+    ],
+    "weaknesses": [
+      "Relocation required or remote compatibility gap",
+      "Missing skills: embeddings, retrieval, ranking, evaluation"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.604,
+      "Skill Coverage Score": 0.4,
+      "Production Score": 1.0,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.757,
+      "Experience Score": 1.0,
+      "Education Score": 1.0,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0026532": {
+    "strengths": [
+      "Strong semantic job description match",
+      "Location matches hybrid hub (Noida/Pune)",
+      "Demonstrated production deployment experience"
+    ],
+    "weaknesses": [
+      "Long notice period (90 days)"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.574,
+      "Skill Coverage Score": 0.547,
+      "Production Score": 1.0,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.675,
+      "Experience Score": 0.85,
+      "Education Score": 1.0,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0052682": {
+    "strengths": [
+      "Ideal experience range (6.6 YOE)",
+      "Short notice period (30 days)",
+      "Demonstrated production deployment experience",
+      "Exceptional platform behavioral signals"
+    ],
+    "weaknesses": [
+      "Relocation required or remote compatibility gap"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.452,
+      "Skill Coverage Score": 0.55,
+      "Production Score": 0.95,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.881,
+      "Experience Score": 1.0,
+      "Education Score": 1.0,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0041568": {
+    "strengths": [
+      "Ideal experience range (5.2 YOE)",
+      "Strong semantic job description match",
+      "Demonstrated production deployment experience",
+      "Exceptional platform behavioral signals"
+    ],
+    "weaknesses": [
+      "Relocation required or remote compatibility gap",
+      "Long notice period (90 days)",
+      "Missing skills: embeddings, retrieval, ranking, evaluation, python"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.651,
+      "Skill Coverage Score": 0.3,
+      "Production Score": 1.0,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.709,
+      "Experience Score": 1.0,
+      "Education Score": 1.0,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0015578": {
+    "strengths": [
+      "Ideal experience range (5.4 YOE)",
+      "Strong semantic job description match",
+      "Location matches hybrid hub (Noida/Pune)",
+      "Demonstrated production deployment experience"
+    ],
+    "weaknesses": [
+      "Long notice period (90 days)"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.54,
+      "Skill Coverage Score": 0.52,
+      "Production Score": 0.95,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.674,
+      "Experience Score": 1.0,
+      "Education Score": 1.0,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0081686": {
+    "strengths": [
+      "Ideal experience range (6.0 YOE)",
+      "Strong semantic job description match",
+      "Demonstrated production deployment experience"
+    ],
+    "weaknesses": [
+      "Relocation required or remote compatibility gap"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.506,
+      "Skill Coverage Score": 0.55,
+      "Production Score": 1.0,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.64,
+      "Experience Score": 1.0,
+      "Education Score": 1.0,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0036184": {
+    "strengths": [
+      "Ideal experience range (6.0 YOE)",
+      "Short notice period (30 days)",
+      "Demonstrated production deployment experience",
+      "Exceptional platform behavioral signals"
+    ],
+    "weaknesses": [
+      "Relocation required or remote compatibility gap"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.498,
+      "Skill Coverage Score": 0.535,
+      "Production Score": 1.0,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.792,
+      "Experience Score": 1.0,
+      "Education Score": 0.8,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0049896": {
+    "strengths": [
+      "Ideal experience range (7.3 YOE)",
+      "Strong semantic job description match",
+      "Demonstrated production deployment experience",
+      "Exceptional platform behavioral signals"
+    ],
+    "weaknesses": [
+      "Relocation required or remote compatibility gap",
+      "Long notice period (90 days)",
+      "Missing skills: embeddings, ranking, evaluation, vector database"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.641,
+      "Skill Coverage Score": 0.405,
+      "Production Score": 1.0,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.713,
+      "Experience Score": 1.0,
+      "Education Score": 0.6,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0099401": {
+    "strengths": [
+      "Ideal experience range (7.7 YOE)",
+      "Strong semantic job description match",
+      "Demonstrated production deployment experience"
+    ],
+    "weaknesses": [
+      "Relocation required or remote compatibility gap",
+      "Long notice period (90 days)"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.563,
+      "Skill Coverage Score": 0.585,
+      "Production Score": 0.95,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.461,
+      "Experience Score": 1.0,
+      "Education Score": 1.0,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0007009": {
+    "strengths": [
+      "Ideal experience range (7.9 YOE)",
+      "Strong semantic job description match",
+      "Location matches hybrid hub (Noida/Pune)",
+      "Short notice period (30 days)",
+      "Demonstrated production deployment experience",
+      "Exceptional platform behavioral signals"
+    ],
+    "weaknesses": [
+      "No critical concerns detected"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.508,
+      "Skill Coverage Score": 0.55,
+      "Production Score": 1.0,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.717,
+      "Experience Score": 1.0,
+      "Education Score": 0.8,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0037944": {
+    "strengths": [
+      "Strong semantic job description match",
+      "Short notice period (30 days)",
+      "Demonstrated production deployment experience",
+      "Exceptional platform behavioral signals"
+    ],
+    "weaknesses": [
+      "Relocation required or remote compatibility gap"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.513,
+      "Skill Coverage Score": 0.535,
+      "Production Score": 1.0,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.753,
+      "Experience Score": 0.85,
+      "Education Score": 1.0,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0044855": {
+    "strengths": [
+      "Ideal experience range (6.6 YOE)",
+      "Demonstrated production deployment experience",
+      "High coverage of core required AI skills"
+    ],
+    "weaknesses": [
+      "Relocation required or remote compatibility gap"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.492,
+      "Skill Coverage Score": 0.6,
+      "Production Score": 1.0,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.633,
+      "Experience Score": 1.0,
+      "Education Score": 0.8,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0046525": {
+    "strengths": [
+      "Ideal experience range (6.1 YOE)",
+      "Strong semantic job description match",
+      "Location matches hybrid hub (Noida/Pune)",
+      "Demonstrated production deployment experience",
+      "Exceptional platform behavioral signals"
+    ],
+    "weaknesses": [
+      "Missing skills: embeddings, ranking, evaluation, python"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.697,
+      "Skill Coverage Score": 0.398,
+      "Production Score": 0.7,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.765,
+      "Experience Score": 1.0,
+      "Education Score": 1.0,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0041669": {
+    "strengths": [
+      "Ideal experience range (8.0 YOE)",
+      "Strong semantic job description match",
+      "Location matches hybrid hub (Noida/Pune)",
+      "Demonstrated production deployment experience",
+      "Exceptional platform behavioral signals"
+    ],
+    "weaknesses": [
+      "Missing skills: embeddings, ranking, evaluation, python"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.538,
+      "Skill Coverage Score": 0.378,
+      "Production Score": 1.0,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.829,
+      "Experience Score": 1.0,
+      "Education Score": 1.0,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0012957": {
+    "strengths": [
+      "Strong semantic job description match",
+      "Location matches hybrid hub (Noida/Pune)",
+      "Demonstrated production deployment experience"
+    ],
+    "weaknesses": [
+      "Long notice period (120 days)"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.667,
+      "Skill Coverage Score": 0.511,
+      "Production Score": 0.85,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.642,
+      "Experience Score": 0.85,
+      "Education Score": 0.8,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0027691": {
+    "strengths": [
+      "Ideal experience range (6.5 YOE)",
+      "Strong semantic job description match",
+      "Location matches hybrid hub (Noida/Pune)",
+      "Short notice period (15 days)",
+      "Demonstrated production deployment experience",
+      "Exceptional platform behavioral signals"
+    ],
+    "weaknesses": [
+      "Missing skills: retrieval, ranking, evaluation"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.501,
+      "Skill Coverage Score": 0.497,
+      "Production Score": 1.0,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.792,
+      "Experience Score": 1.0,
+      "Education Score": 0.8,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0042029": {
+    "strengths": [
+      "Ideal experience range (6.5 YOE)",
+      "Strong semantic job description match",
+      "Location matches hybrid hub (Noida/Pune)",
+      "Demonstrated production deployment experience"
+    ],
+    "weaknesses": [
+      "No critical concerns detected"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.624,
+      "Skill Coverage Score": 0.505,
+      "Production Score": 0.85,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.632,
+      "Experience Score": 1.0,
+      "Education Score": 0.8,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0044883": {
+    "strengths": [
+      "Ideal experience range (6.3 YOE)",
+      "Strong semantic job description match",
+      "Demonstrated production deployment experience"
+    ],
+    "weaknesses": [
+      "Relocation required or remote compatibility gap",
+      "Long notice period (90 days)",
+      "Missing skills: retrieval, ranking, evaluation, vector database"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.619,
+      "Skill Coverage Score": 0.427,
+      "Production Score": 1.0,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.662,
+      "Experience Score": 1.0,
+      "Education Score": 0.6,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0064904": {
+    "strengths": [
+      "Strong semantic job description match",
+      "Demonstrated production deployment experience",
+      "Exceptional platform behavioral signals"
+    ],
+    "weaknesses": [
+      "Relocation required or remote compatibility gap",
+      "Long notice period (90 days)"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.625,
+      "Skill Coverage Score": 0.52,
+      "Production Score": 0.8,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.806,
+      "Experience Score": 0.85,
+      "Education Score": 0.8,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0052328": {
+    "strengths": [
+      "Ideal experience range (6.5 YOE)",
+      "Strong semantic job description match",
+      "Location matches hybrid hub (Noida/Pune)",
+      "Short notice period (30 days)",
+      "Demonstrated production deployment experience",
+      "Exceptional platform behavioral signals"
+    ],
+    "weaknesses": [
+      "Missing skills: embeddings, retrieval, ranking, evaluation"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.514,
+      "Skill Coverage Score": 0.37,
+      "Production Score": 1.0,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.871,
+      "Experience Score": 1.0,
+      "Education Score": 1.0,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0066376": {
+    "strengths": [
+      "Ideal experience range (5.7 YOE)",
+      "Strong semantic job description match",
+      "Demonstrated production deployment experience",
+      "Exceptional platform behavioral signals"
+    ],
+    "weaknesses": [
+      "Relocation required or remote compatibility gap",
+      "Long notice period (90 days)",
+      "Missing skills: embeddings, ranking, evaluation, python"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.513,
+      "Skill Coverage Score": 0.45,
+      "Production Score": 1.0,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.712,
+      "Experience Score": 1.0,
+      "Education Score": 1.0,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0018722": {
+    "strengths": [
+      "Ideal experience range (6.6 YOE)",
+      "Strong semantic job description match",
+      "Demonstrated production deployment experience",
+      "Exceptional platform behavioral signals"
+    ],
+    "weaknesses": [
+      "Relocation required or remote compatibility gap",
+      "Long notice period (90 days)",
+      "Missing skills: embeddings, retrieval, ranking, evaluation, search"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.587,
+      "Skill Coverage Score": 0.3,
+      "Production Score": 1.0,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.878,
+      "Experience Score": 1.0,
+      "Education Score": 0.8,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0014440": {
+    "strengths": [
+      "Ideal experience range (6.4 YOE)",
+      "Strong semantic job description match",
+      "Demonstrated production deployment experience",
+      "Exceptional platform behavioral signals"
+    ],
+    "weaknesses": [
+      "Relocation required or remote compatibility gap",
+      "Missing skills: embeddings, retrieval, ranking, evaluation, python"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.586,
+      "Skill Coverage Score": 0.27,
+      "Production Score": 1.0,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.836,
+      "Experience Score": 1.0,
+      "Education Score": 1.0,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0095528": {
+    "strengths": [
+      "Ideal experience range (5.3 YOE)",
+      "Strong semantic job description match",
+      "Demonstrated production deployment experience",
+      "Exceptional platform behavioral signals"
+    ],
+    "weaknesses": [
+      "Relocation required or remote compatibility gap",
+      "Missing skills: embeddings, retrieval, ranking, evaluation"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.531,
+      "Skill Coverage Score": 0.385,
+      "Production Score": 1.0,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.751,
+      "Experience Score": 1.0,
+      "Education Score": 1.0,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0024466": {
+    "strengths": [
+      "Ideal experience range (5.2 YOE)",
+      "Strong semantic job description match",
+      "Demonstrated production deployment experience"
+    ],
+    "weaknesses": [
+      "Relocation required or remote compatibility gap",
+      "Long notice period (120 days)",
+      "Missing skills: embeddings, retrieval, ranking, evaluation"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.588,
+      "Skill Coverage Score": 0.38,
+      "Production Score": 1.0,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.587,
+      "Experience Score": 1.0,
+      "Education Score": 1.0,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0040117": {
+    "strengths": [
+      "Ideal experience range (6.5 YOE)",
+      "Short notice period (15 days)",
+      "Demonstrated production deployment experience",
+      "Exceptional platform behavioral signals"
+    ],
+    "weaknesses": [
+      "Relocation required or remote compatibility gap",
+      "Missing skills: retrieval, ranking, evaluation, python"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.477,
+      "Skill Coverage Score": 0.45,
+      "Production Score": 1.0,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.764,
+      "Experience Score": 1.0,
+      "Education Score": 1.0,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0070202": {
+    "strengths": [
+      "Ideal experience range (5.1 YOE)",
+      "Strong semantic job description match",
+      "Demonstrated production deployment experience"
+    ],
+    "weaknesses": [
+      "Relocation required or remote compatibility gap",
+      "Long notice period (90 days)"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.625,
+      "Skill Coverage Score": 0.535,
+      "Production Score": 0.7,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.597,
+      "Experience Score": 1.0,
+      "Education Score": 1.0,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0076251": {
+    "strengths": [
+      "Ideal experience range (7.6 YOE)",
+      "Strong semantic job description match",
+      "Demonstrated production deployment experience",
+      "Exceptional platform behavioral signals"
+    ],
+    "weaknesses": [
+      "Relocation required or remote compatibility gap",
+      "Missing skills: embeddings, retrieval, ranking, evaluation, python"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.668,
+      "Skill Coverage Score": 0.27,
+      "Production Score": 0.95,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.722,
+      "Experience Score": 1.0,
+      "Education Score": 0.8,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0053591": {
+    "strengths": [
+      "Ideal experience range (5.3 YOE)",
+      "Demonstrated production deployment experience",
+      "Exceptional platform behavioral signals"
+    ],
+    "weaknesses": [
+      "Relocation required or remote compatibility gap",
+      "Missing skills: retrieval, ranking, evaluation, python"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.5,
+      "Skill Coverage Score": 0.405,
+      "Production Score": 1.0,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.866,
+      "Experience Score": 1.0,
+      "Education Score": 0.8,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0009024": {
+    "strengths": [
+      "Ideal experience range (5.2 YOE)",
+      "Strong semantic job description match",
+      "Short notice period (30 days)",
+      "Demonstrated production deployment experience"
+    ],
+    "weaknesses": [
+      "Relocation required or remote compatibility gap",
+      "Missing skills: embeddings, retrieval, ranking, evaluation"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.588,
+      "Skill Coverage Score": 0.37,
+      "Production Score": 0.95,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.641,
+      "Experience Score": 1.0,
+      "Education Score": 1.0,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0079387": {
+    "strengths": [
+      "Ideal experience range (6.9 YOE)",
+      "Strong semantic job description match",
+      "Short notice period (30 days)",
+      "Demonstrated production deployment experience",
+      "Exceptional platform behavioral signals"
+    ],
+    "weaknesses": [
+      "Relocation required or remote compatibility gap",
+      "Missing skills: embeddings, retrieval, ranking, evaluation"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.502,
+      "Skill Coverage Score": 0.385,
+      "Production Score": 0.95,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.861,
+      "Experience Score": 1.0,
+      "Education Score": 1.0,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0081852": {
+    "strengths": [
+      "Ideal experience range (5.9 YOE)",
+      "Strong semantic job description match",
+      "Location matches hybrid hub (Noida/Pune)",
+      "Demonstrated production deployment experience",
+      "Exceptional platform behavioral signals"
+    ],
+    "weaknesses": [
+      "Missing skills: embeddings, retrieval, ranking, evaluation, python"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.615,
+      "Skill Coverage Score": 0.285,
+      "Production Score": 0.95,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.824,
+      "Experience Score": 1.0,
+      "Education Score": 0.8,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0069905": {
+    "strengths": [
+      "Ideal experience range (6.6 YOE)",
+      "Strong semantic job description match",
+      "Demonstrated production deployment experience",
+      "Exceptional platform behavioral signals"
+    ],
+    "weaknesses": [
+      "Relocation required or remote compatibility gap",
+      "Long notice period (90 days)",
+      "Missing skills: embeddings, retrieval, ranking, evaluation, search"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.591,
+      "Skill Coverage Score": 0.3,
+      "Production Score": 1.0,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.781,
+      "Experience Score": 1.0,
+      "Education Score": 0.8,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0050876": {
+    "strengths": [
+      "Ideal experience range (6.0 YOE)",
+      "Strong semantic job description match",
+      "Demonstrated production deployment experience",
+      "Exceptional platform behavioral signals"
+    ],
+    "weaknesses": [
+      "Relocation required or remote compatibility gap",
+      "Long notice period (90 days)",
+      "Missing skills: embeddings, retrieval, ranking, evaluation"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.506,
+      "Skill Coverage Score": 0.385,
+      "Production Score": 1.0,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.754,
+      "Experience Score": 1.0,
+      "Education Score": 1.0,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0086151": {
+    "strengths": [
+      "Ideal experience range (7.7 YOE)",
+      "Strong semantic job description match",
+      "Demonstrated production deployment experience",
+      "Exceptional platform behavioral signals"
+    ],
+    "weaknesses": [
+      "Relocation required or remote compatibility gap",
+      "Long notice period (120 days)",
+      "Missing skills: retrieval, ranking, evaluation, python"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.563,
+      "Skill Coverage Score": 0.42,
+      "Production Score": 1.0,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.713,
+      "Experience Score": 1.0,
+      "Education Score": 0.6,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0064326": {
+    "strengths": [
+      "Ideal experience range (7.6 YOE)",
+      "Strong semantic job description match",
+      "Demonstrated production deployment experience",
+      "Exceptional platform behavioral signals"
+    ],
+    "weaknesses": [
+      "Relocation required or remote compatibility gap",
+      "Missing skills: embeddings, retrieval, ranking, evaluation"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.614,
+      "Skill Coverage Score": 0.385,
+      "Production Score": 0.8,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.827,
+      "Experience Score": 1.0,
+      "Education Score": 0.8,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0077285": {
+    "strengths": [
+      "Ideal experience range (5.5 YOE)",
+      "Demonstrated production deployment experience",
+      "Exceptional platform behavioral signals"
+    ],
+    "weaknesses": [
+      "Relocation required or remote compatibility gap",
+      "Missing skills: ranking, evaluation, python, search"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.462,
+      "Skill Coverage Score": 0.485,
+      "Production Score": 1.0,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.771,
+      "Experience Score": 1.0,
+      "Education Score": 0.8,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0066999": {
+    "strengths": [
+      "Ideal experience range (5.9 YOE)",
+      "Location matches hybrid hub (Noida/Pune)",
+      "Short notice period (15 days)",
+      "Demonstrated production deployment experience",
+      "Exceptional platform behavioral signals"
+    ],
+    "weaknesses": [
+      "No critical concerns detected"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.459,
+      "Skill Coverage Score": 0.562,
+      "Production Score": 0.8,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.816,
+      "Experience Score": 1.0,
+      "Education Score": 1.0,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0096142": {
+    "strengths": [
+      "Ideal experience range (5.0 YOE)",
+      "Demonstrated production deployment experience",
+      "Exceptional platform behavioral signals"
+    ],
+    "weaknesses": [
+      "Relocation required or remote compatibility gap",
+      "Long notice period (120 days)",
+      "Missing skills: embeddings, retrieval, ranking, evaluation"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.475,
+      "Skill Coverage Score": 0.385,
+      "Production Score": 1.0,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.812,
+      "Experience Score": 1.0,
+      "Education Score": 1.0,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0007411": {
+    "strengths": [
+      "Ideal experience range (8.0 YOE)",
+      "Strong semantic job description match",
+      "Short notice period (15 days)",
+      "Demonstrated production deployment experience"
+    ],
+    "weaknesses": [
+      "Relocation required or remote compatibility gap"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.597,
+      "Skill Coverage Score": 0.535,
+      "Production Score": 0.8,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.441,
+      "Experience Score": 1.0,
+      "Education Score": 1.0,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0030953": {
+    "strengths": [
+      "Ideal experience range (7.8 YOE)",
+      "Strong semantic job description match",
+      "Demonstrated production deployment experience"
+    ],
+    "weaknesses": [
+      "Relocation required or remote compatibility gap",
+      "Missing skills: embeddings, retrieval, ranking, evaluation, search"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.629,
+      "Skill Coverage Score": 0.283,
+      "Production Score": 1.0,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.539,
+      "Experience Score": 1.0,
+      "Education Score": 1.0,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0074225": {
+    "strengths": [
+      "Strong semantic job description match",
+      "Demonstrated production deployment experience",
+      "Exceptional platform behavioral signals"
+    ],
+    "weaknesses": [
+      "Relocation required or remote compatibility gap",
+      "Long notice period (120 days)",
+      "Missing skills: embeddings, retrieval, ranking, evaluation"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.558,
+      "Skill Coverage Score": 0.37,
+      "Production Score": 1.0,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.822,
+      "Experience Score": 0.85,
+      "Education Score": 0.8,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0027801": {
+    "strengths": [
+      "Ideal experience range (7.4 YOE)",
+      "Strong semantic job description match",
+      "Demonstrated production deployment experience",
+      "Exceptional platform behavioral signals"
+    ],
+    "weaknesses": [
+      "Relocation required or remote compatibility gap",
+      "Long notice period (120 days)",
+      "Missing skills: embeddings, retrieval, ranking, evaluation"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.513,
+      "Skill Coverage Score": 0.385,
+      "Production Score": 1.0,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.773,
+      "Experience Score": 1.0,
+      "Education Score": 0.8,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0076904": {
+    "strengths": [
+      "Strong semantic job description match",
+      "Demonstrated production deployment experience",
+      "Exceptional platform behavioral signals"
+    ],
+    "weaknesses": [
+      "Relocation required or remote compatibility gap",
+      "Long notice period (90 days)"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.623,
+      "Skill Coverage Score": 0.509,
+      "Production Score": 0.8,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.746,
+      "Experience Score": 0.85,
+      "Education Score": 0.6,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0091909": {
+    "strengths": [
+      "Ideal experience range (6.9 YOE)",
+      "Strong semantic job description match",
+      "Location matches hybrid hub (Noida/Pune)",
+      "Demonstrated production deployment experience",
+      "Exceptional platform behavioral signals"
+    ],
+    "weaknesses": [
+      "Missing skills: embeddings, retrieval, ranking, evaluation"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.557,
+      "Skill Coverage Score": 0.4,
+      "Production Score": 0.85,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.736,
+      "Experience Score": 1.0,
+      "Education Score": 1.0,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0076831": {
+    "strengths": [
+      "Strong semantic job description match",
+      "Location matches hybrid hub (Noida/Pune)",
+      "Demonstrated production deployment experience"
+    ],
+    "weaknesses": [
+      "Long notice period (90 days)",
+      "Missing skills: embeddings, retrieval, ranking, evaluation"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.654,
+      "Skill Coverage Score": 0.361,
+      "Production Score": 0.9,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.596,
+      "Experience Score": 0.85,
+      "Education Score": 1.0,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0030031": {
+    "strengths": [
+      "Ideal experience range (5.7 YOE)",
+      "Strong semantic job description match",
+      "Short notice period (30 days)",
+      "Demonstrated production deployment experience"
+    ],
+    "weaknesses": [
+      "Relocation required or remote compatibility gap",
+      "Missing skills: embeddings, ranking, evaluation"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.558,
+      "Skill Coverage Score": 0.484,
+      "Production Score": 0.8,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.626,
+      "Experience Score": 1.0,
+      "Education Score": 1.0,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0068351": {
+    "strengths": [
+      "Ideal experience range (6.4 YOE)",
+      "Short notice period (0 days)",
+      "Demonstrated production deployment experience",
+      "High coverage of core required AI skills",
+      "Exceptional platform behavioral signals"
+    ],
+    "weaknesses": [
+      "Relocation required or remote compatibility gap"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.416,
+      "Skill Coverage Score": 0.652,
+      "Production Score": 0.8,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.706,
+      "Experience Score": 1.0,
+      "Education Score": 1.0,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0081053": {
+    "strengths": [
+      "Ideal experience range (5.4 YOE)",
+      "Strong semantic job description match",
+      "Demonstrated production deployment experience",
+      "Exceptional platform behavioral signals"
+    ],
+    "weaknesses": [
+      "Relocation required or remote compatibility gap",
+      "Long notice period (90 days)",
+      "Missing skills: embeddings, retrieval, ranking, evaluation"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.536,
+      "Skill Coverage Score": 0.4,
+      "Production Score": 0.8,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.827,
+      "Experience Score": 1.0,
+      "Education Score": 1.0,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0074735": {
+    "strengths": [
+      "Ideal experience range (5.5 YOE)",
+      "Demonstrated production deployment experience",
+      "Exceptional platform behavioral signals"
+    ],
+    "weaknesses": [
+      "Relocation required or remote compatibility gap",
+      "Long notice period (90 days)",
+      "Missing skills: embeddings, ranking, evaluation, python, llm"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.494,
+      "Skill Coverage Score": 0.32,
+      "Production Score": 0.95,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.886,
+      "Experience Score": 1.0,
+      "Education Score": 1.0,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0065878": {
+    "strengths": [
+      "Ideal experience range (7.8 YOE)",
+      "Strong semantic job description match",
+      "Short notice period (15 days)",
+      "Demonstrated production deployment experience",
+      "Exceptional platform behavioral signals"
+    ],
+    "weaknesses": [
+      "Relocation required or remote compatibility gap",
+      "Missing skills: embeddings, retrieval, ranking, evaluation, vector database"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.578,
+      "Skill Coverage Score": 0.285,
+      "Production Score": 1.0,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.724,
+      "Experience Score": 1.0,
+      "Education Score": 0.8,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0045250": {
+    "strengths": [
+      "Ideal experience range (6.6 YOE)",
+      "Strong semantic job description match",
+      "Short notice period (15 days)",
+      "Demonstrated production deployment experience"
+    ],
+    "weaknesses": [
+      "Relocation required or remote compatibility gap",
+      "Missing skills: retrieval, ranking, evaluation, python"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.591,
+      "Skill Coverage Score": 0.435,
+      "Production Score": 0.9,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.63,
+      "Experience Score": 1.0,
+      "Education Score": 0.6,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0042506": {
+    "strengths": [
+      "Strong semantic job description match",
+      "Short notice period (15 days)",
+      "Demonstrated production deployment experience",
+      "Exceptional platform behavioral signals"
+    ],
+    "weaknesses": [
+      "Relocation required or remote compatibility gap",
+      "Security/consistency flags detected: TIMELINE_INCONSISTENCY"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.652,
+      "Skill Coverage Score": 0.52,
+      "Production Score": 0.8,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.772,
+      "Experience Score": 0.85,
+      "Education Score": 0.8,
+      "Honeypot Penalty": 0.3
+    }
+  },
+  "CAND_0051004": {
+    "strengths": [
+      "Strong semantic job description match",
+      "Location matches hybrid hub (Noida/Pune)",
+      "Short notice period (15 days)",
+      "Demonstrated production deployment experience"
+    ],
+    "weaknesses": [
+      "Missing skills: retrieval, ranking, evaluation"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.532,
+      "Skill Coverage Score": 0.482,
+      "Production Score": 0.95,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.569,
+      "Experience Score": 0.85,
+      "Education Score": 1.0,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0084819": {
+    "strengths": [
+      "Strong semantic job description match",
+      "Demonstrated production deployment experience",
+      "Exceptional platform behavioral signals"
+    ],
+    "weaknesses": [
+      "Relocation required or remote compatibility gap",
+      "Long notice period (120 days)"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.605,
+      "Skill Coverage Score": 0.53,
+      "Production Score": 0.7,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.825,
+      "Experience Score": 0.85,
+      "Education Score": 0.6,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0039838": {
+    "strengths": [
+      "Strong semantic job description match",
+      "Demonstrated production deployment experience",
+      "Exceptional platform behavioral signals"
+    ],
+    "weaknesses": [
+      "Relocation required or remote compatibility gap",
+      "Long notice period (90 days)",
+      "Missing skills: retrieval, ranking, evaluation, python"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.514,
+      "Skill Coverage Score": 0.412,
+      "Production Score": 0.95,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.753,
+      "Experience Score": 0.85,
+      "Education Score": 1.0,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0054394": {
+    "strengths": [
+      "Location matches hybrid hub (Noida/Pune)",
+      "Short notice period (30 days)",
+      "Demonstrated production deployment experience",
+      "Exceptional platform behavioral signals"
+    ],
+    "weaknesses": [
+      "Missing skills: retrieval, ranking, evaluation, search"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.48,
+      "Skill Coverage Score": 0.435,
+      "Production Score": 1.0,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.731,
+      "Experience Score": 0.85,
+      "Education Score": 1.0,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0094056": {
+    "strengths": [
+      "Ideal experience range (5.9 YOE)",
+      "Strong semantic job description match",
+      "Location matches hybrid hub (Noida/Pune)",
+      "Demonstrated production deployment experience"
+    ],
+    "weaknesses": [
+      "Long notice period (120 days)",
+      "Missing skills: retrieval, ranking, evaluation, python"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.527,
+      "Skill Coverage Score": 0.45,
+      "Production Score": 0.95,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.557,
+      "Experience Score": 1.0,
+      "Education Score": 0.8,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0037566": {
+    "strengths": [
+      "Ideal experience range (6.9 YOE)",
+      "Strong semantic job description match",
+      "Location matches hybrid hub (Noida/Pune)",
+      "Short notice period (15 days)",
+      "Demonstrated production deployment experience",
+      "Exceptional platform behavioral signals"
+    ],
+    "weaknesses": [
+      "Missing skills: embeddings, retrieval, ranking, evaluation, python"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.566,
+      "Skill Coverage Score": 0.261,
+      "Production Score": 0.95,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.809,
+      "Experience Score": 1.0,
+      "Education Score": 0.8,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0057701": {
+    "strengths": [
+      "Strong semantic job description match",
+      "Demonstrated production deployment experience"
+    ],
+    "weaknesses": [
+      "Relocation required or remote compatibility gap",
+      "Long notice period (120 days)",
+      "Missing skills: embeddings, retrieval, ranking, evaluation"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.578,
+      "Skill Coverage Score": 0.378,
+      "Production Score": 0.9,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.665,
+      "Experience Score": 0.85,
+      "Education Score": 1.0,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0051630": {
+    "strengths": [
+      "Ideal experience range (6.0 YOE)",
+      "Demonstrated production deployment experience",
+      "High coverage of core required AI skills"
+    ],
+    "weaknesses": [
+      "Relocation required or remote compatibility gap",
+      "Long notice period (90 days)"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.495,
+      "Skill Coverage Score": 0.7,
+      "Production Score": 0.65,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.583,
+      "Experience Score": 1.0,
+      "Education Score": 0.8,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0047721": {
+    "strengths": [
+      "Ideal experience range (7.0 YOE)",
+      "Strong semantic job description match",
+      "Demonstrated production deployment experience"
+    ],
+    "weaknesses": [
+      "Relocation required or remote compatibility gap",
+      "Long notice period (90 days)",
+      "Missing skills: embeddings, ranking, evaluation, python, llm"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.575,
+      "Skill Coverage Score": 0.35,
+      "Production Score": 0.85,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.636,
+      "Experience Score": 1.0,
+      "Education Score": 1.0,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0041611": {
+    "strengths": [
+      "Ideal experience range (6.4 YOE)",
+      "Strong semantic job description match",
+      "Short notice period (30 days)",
+      "Demonstrated production deployment experience"
+    ],
+    "weaknesses": [
+      "Relocation required or remote compatibility gap",
+      "Missing skills: embeddings, retrieval, ranking, evaluation"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.675,
+      "Skill Coverage Score": 0.385,
+      "Production Score": 0.95,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.314,
+      "Experience Score": 1.0,
+      "Education Score": 0.6,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0050454": {
+    "strengths": [
+      "Ideal experience range (6.8 YOE)",
+      "Strong semantic job description match",
+      "Location matches hybrid hub (Noida/Pune)",
+      "Short notice period (30 days)",
+      "Demonstrated production deployment experience",
+      "Exceptional platform behavioral signals"
+    ],
+    "weaknesses": [
+      "Missing skills: embeddings, retrieval, ranking, evaluation"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.551,
+      "Skill Coverage Score": 0.385,
+      "Production Score": 0.75,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.779,
+      "Experience Score": 1.0,
+      "Education Score": 1.0,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0072660": {
+    "strengths": [
+      "Ideal experience range (7.1 YOE)",
+      "Strong semantic job description match",
+      "Short notice period (30 days)",
+      "Demonstrated production deployment experience",
+      "Exceptional platform behavioral signals"
+    ],
+    "weaknesses": [
+      "Relocation required or remote compatibility gap",
+      "Security/consistency flags detected: TIMELINE_INCONSISTENCY"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.574,
+      "Skill Coverage Score": 0.55,
+      "Production Score": 0.7,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.753,
+      "Experience Score": 1.0,
+      "Education Score": 1.0,
+      "Honeypot Penalty": 0.3
+    }
+  },
+  "CAND_0010685": {
+    "strengths": [
+      "Ideal experience range (6.7 YOE)",
+      "Strong semantic job description match",
+      "Short notice period (30 days)",
+      "Demonstrated production deployment experience",
+      "Exceptional platform behavioral signals"
+    ],
+    "weaknesses": [
+      "Relocation required or remote compatibility gap",
+      "Missing skills: embeddings, ranking, evaluation, llm"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.535,
+      "Skill Coverage Score": 0.45,
+      "Production Score": 0.8,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.806,
+      "Experience Score": 1.0,
+      "Education Score": 0.6,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0009691": {
+    "strengths": [
+      "Ideal experience range (6.2 YOE)",
+      "Strong semantic job description match",
+      "Demonstrated production deployment experience",
+      "Exceptional platform behavioral signals"
+    ],
+    "weaknesses": [
+      "Relocation required or remote compatibility gap",
+      "Long notice period (120 days)",
+      "Missing skills: embeddings, retrieval, ranking, evaluation, search"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.575,
+      "Skill Coverage Score": 0.27,
+      "Production Score": 0.95,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.71,
+      "Experience Score": 1.0,
+      "Education Score": 0.8,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0006557": {
+    "strengths": [
+      "Ideal experience range (7.9 YOE)",
+      "Strong semantic job description match",
+      "Demonstrated production deployment experience"
+    ],
+    "weaknesses": [
+      "Relocation required or remote compatibility gap",
+      "Long notice period (120 days)",
+      "Missing skills: embeddings, ranking, evaluation, python",
+      "Security/consistency flags detected: TIMELINE_INCONSISTENCY"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.57,
+      "Skill Coverage Score": 0.398,
+      "Production Score": 1.0,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.688,
+      "Experience Score": 1.0,
+      "Education Score": 0.8,
+      "Honeypot Penalty": 0.3
+    }
+  },
+  "CAND_0007460": {
+    "strengths": [
+      "Strong semantic job description match",
+      "Location matches hybrid hub (Noida/Pune)",
+      "Demonstrated production deployment experience",
+      "Exceptional platform behavioral signals"
+    ],
+    "weaknesses": [
+      "Long notice period (120 days)"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.514,
+      "Skill Coverage Score": 0.555,
+      "Production Score": 0.85,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.709,
+      "Experience Score": 0.85,
+      "Education Score": 0.6,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0060072": {
+    "strengths": [
+      "Ideal experience range (5.7 YOE)",
+      "Strong semantic job description match",
+      "Demonstrated production deployment experience"
+    ],
+    "weaknesses": [
+      "Relocation required or remote compatibility gap",
+      "Long notice period (90 days)",
+      "Security/consistency flags detected: BUZZWORD_STUFFING"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.659,
+      "Skill Coverage Score": 0.535,
+      "Production Score": 0.7,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.432,
+      "Experience Score": 1.0,
+      "Education Score": 1.0,
+      "Honeypot Penalty": 0.25
+    }
+  },
+  "CAND_0092278": {
+    "strengths": [
+      "Ideal experience range (6.8 YOE)",
+      "Strong semantic job description match",
+      "Location matches hybrid hub (Noida/Pune)",
+      "Demonstrated production deployment experience"
+    ],
+    "weaknesses": [
+      "Long notice period (90 days)",
+      "Missing skills: embeddings, retrieval, ranking, evaluation, python"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.713,
+      "Skill Coverage Score": 0.3,
+      "Production Score": 0.8,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.339,
+      "Experience Score": 1.0,
+      "Education Score": 1.0,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0094759": {
+    "strengths": [
+      "Ideal experience range (8.6 YOE)",
+      "Strong semantic job description match",
+      "Location matches hybrid hub (Noida/Pune)",
+      "Short notice period (30 days)",
+      "Demonstrated production deployment experience"
+    ],
+    "weaknesses": [
+      "Missing skills: embeddings, retrieval, ranking, evaluation"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.576,
+      "Skill Coverage Score": 0.385,
+      "Production Score": 0.95,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.454,
+      "Experience Score": 1.0,
+      "Education Score": 0.8,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0099806": {
+    "strengths": [
+      "Strong semantic job description match",
+      "Short notice period (30 days)",
+      "Demonstrated production deployment experience",
+      "Exceptional platform behavioral signals"
+    ],
+    "weaknesses": [
+      "Relocation required or remote compatibility gap",
+      "Missing skills: retrieval, ranking, evaluation, python"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.667,
+      "Skill Coverage Score": 0.42,
+      "Production Score": 0.5,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.828,
+      "Experience Score": 0.85,
+      "Education Score": 1.0,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0037980": {
+    "strengths": [
+      "Ideal experience range (9.0 YOE)",
+      "Location matches hybrid hub (Noida/Pune)",
+      "Short notice period (0 days)",
+      "Demonstrated production deployment experience",
+      "Exceptional platform behavioral signals"
+    ],
+    "weaknesses": [
+      "Missing skills: embeddings, ranking, evaluation, vector database"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.476,
+      "Skill Coverage Score": 0.45,
+      "Production Score": 0.8,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.725,
+      "Experience Score": 1.0,
+      "Education Score": 1.0,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0075574": {
+    "strengths": [
+      "Ideal experience range (5.7 YOE)",
+      "Strong semantic job description match",
+      "Location matches hybrid hub (Noida/Pune)",
+      "Demonstrated production deployment experience",
+      "Exceptional platform behavioral signals"
+    ],
+    "weaknesses": [
+      "Missing skills: embeddings, retrieval, ranking, evaluation"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.523,
+      "Skill Coverage Score": 0.385,
+      "Production Score": 0.8,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.712,
+      "Experience Score": 1.0,
+      "Education Score": 1.0,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0075439": {
+    "strengths": [
+      "Short notice period (30 days)",
+      "Demonstrated production deployment experience"
+    ],
+    "weaknesses": [
+      "Relocation required or remote compatibility gap"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.459,
+      "Skill Coverage Score": 0.517,
+      "Production Score": 0.95,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.647,
+      "Experience Score": 0.85,
+      "Education Score": 0.8,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0036863": {
+    "strengths": [
+      "Strong semantic job description match",
+      "Location matches hybrid hub (Noida/Pune)",
+      "Demonstrated production deployment experience",
+      "Exceptional platform behavioral signals"
+    ],
+    "weaknesses": [
+      "Missing skills: embeddings, retrieval, ranking, evaluation, python"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.549,
+      "Skill Coverage Score": 0.285,
+      "Production Score": 1.0,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.74,
+      "Experience Score": 0.85,
+      "Education Score": 0.8,
+      "Honeypot Penalty": 0.0
+    }
+  },
+  "CAND_0007412": {
+    "strengths": [
+      "Ideal experience range (7.4 YOE)",
+      "Location matches hybrid hub (Noida/Pune)",
+      "Demonstrated production deployment experience",
+      "Exceptional platform behavioral signals"
+    ],
+    "weaknesses": [
+      "Long notice period (120 days)",
+      "Missing skills: embeddings, retrieval, ranking, evaluation, llm"
+    ],
+    "score_breakdown": {
+      "Semantic Score": 0.45,
+      "Skill Coverage Score": 0.285,
+      "Production Score": 1.0,
+      "AI Relevance Score": 1.0,
+      "Behavioral Score": 0.778,
+      "Experience Score": 1.0,
+      "Education Score": 1.0,
+      "Honeypot Penalty": 0.0
+    }
+  }
+}

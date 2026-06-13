@@ -4,16 +4,16 @@
 # ============================================================================
 # Team identity
 # ============================================================================
-team_name: "Antigravity Recruiter"  # Update with your registered team name
+team_name: "TitanForge AI"  # Update with your registered team name
 
 primary_contact:
-  name: "Participant Name"
-  email: "participant@example.com"   # Used for all organizer communication
+  name: "Ayusman Das"
+  email: "ayusmandas2020@gmail.com"   # Used for all organizer communication
   phone: "+91-XXXXXXXXXX"        # Used for top-50 / top-10 outreach
 
 team_members:
-  - name: "Participant Name"
-    email: "participant@example.com"
+  - name: "Ayusman Das"
+    email: "ayusmandas2020@gmail.com"
     role: "ML Engineer"
   # Add more members as needed; solo participants list just one member
 

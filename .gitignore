@@ -1,0 +1,12 @@
+model/
+__pycache__/
+*.tmp
+app_prev.py
+app_recovered.py
+app_redesigned.py
+app_from_commit.py
+diff.txt
+diff_prev_commit.txt
+new_css.txt
+check.py
+scores*
