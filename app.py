@@ -1,2 +1,2 @@
 import streamlit as st
-# UI redesign with Inter font and monochromatic charts
+# Rejection analysis with 5 pre-populated cards
