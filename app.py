@@ -1737,13 +1737,36 @@ def get_ranked_shortlist():
     if "learning-to-rank" in ranking_mode.lower():
         active_list = sorted(ranked_results, key=lambda x: (-x["ltr_score"], x["candidate_id"]))
     else:
-        active_list = ranked_results
-    
+        active_list = sorted(ranked_results, key=lambda x: (-x["hybrid_score"], x["candidate_id"]))
+        
+    for it in active_list:
+        it["raw_active_score"] = it.get("ltr_score", it["hybrid_score"]) if "learning-to-rank" in ranking_mode.lower() else it["hybrid_score"]
+        
+    active_list.sort(key=lambda x: (-x["raw_active_score"], x["candidate_id"]))
     for idx, it in enumerate(active_list):
-        it["display_score"] = it.get("ltr_score", it["hybrid_score"]) if "learning-to-rank" in ranking_mode.lower() else it["hybrid_score"]
         it["display_rank"] = idx + 1
-    
+        
     shortlist_100 = active_list[:100]
+    if len(shortlist_100) > 0:
+        max_raw = max(it["raw_active_score"] for it in shortlist_100)
+        min_raw = min(it["raw_active_score"] for it in shortlist_100)
+        range_raw = max_raw - min_raw
+        for it in shortlist_100:
+            if range_raw > 0:
+                normalized = 0.50 + (it["raw_active_score"] - min_raw) / range_raw * 0.49
+            else:
+                normalized = 0.99
+            it["display_score"] = round(normalized, 6)
+            
+        shortlist_100.sort(key=lambda x: (-x["display_score"], x["candidate_id"]))
+        for idx, it in enumerate(shortlist_100):
+            it["display_rank"] = idx + 1
+            
+        active_list[:len(shortlist_100)] = shortlist_100
+        
+    for it in active_list[len(shortlist_100):]:
+        it["display_score"] = it["raw_active_score"]
+        
     baseline_ranks = {item["candidate_id"]: item["hybrid_rank"] for item in ranked_results}
     return active_list, shortlist_100, baseline_ranks
 
@@ -1849,66 +1872,7 @@ with tab1:
                 st.success(f"Analyzed {len(candidates)} candidates. {len(features)} passed checks, {len(rejected)} filtered.")
                 
     if st.session_state.candidate_features:
-        # Dynamic calculations based on slider weights (Priority 8: What-If simulation)
-        ranked_results = []
-        for item in st.session_state.candidate_features:
-            score = (
-                w_sem * item["sim"] +
-                w_sk * item["sk_score"] +
-                w_prod * item["p_score"] +
-                w_ai * item["ai_score"] +
-                w_beh * item["b_score"] +
-                w_yoe * item["yoe_score"] +
-                w_edu * item["edu_score"] -
-                w_hp * item["h_score"]
-            )
-            item_copy = item.copy()
-            item_copy["score"] = round(score, 4)
-            ranked_results.append(item_copy)
-            
-        # Sort Hybrid
-        ranked_results.sort(key=lambda x: (-x["score"], x["candidate_id"]))
-        for idx, it in enumerate(ranked_results):
-            it["hybrid_rank"] = idx + 1
-            it["hybrid_score"] = it["score"]
-            
-        # Predict LTR scores if LTR selected or for comparison
-        if st.session_state.ltr_model is not None:
-            X_all = []
-            for item in ranked_results:
-                feats = [
-                    item["sim"], item["sk_score"], item["p_score"], item["ai_score"],
-                    item["b_score"], item["yoe_score"], item["edu_score"], item["h_score"],
-                    item["l_score"], item["n_score"]
-                ]
-                X_all.append(feats)
-            preds = st.session_state.ltr_model.predict(np.array(X_all))
-            for idx, item in enumerate(ranked_results):
-                norm_score = max(0.0, min(1.0, float(preds[idx]) / 4.0))
-                item["ltr_score"] = round(norm_score, 4)
-                
-            # LTR Sort
-            ltr_sorted = sorted(ranked_results, key=lambda x: (-x["ltr_score"], x["candidate_id"]))
-            for idx, it in enumerate(ltr_sorted):
-                it["ltr_rank"] = idx + 1
-        else:
-            for it in ranked_results:
-                it["ltr_score"] = it["hybrid_score"]
-                it["ltr_rank"] = it["hybrid_rank"]
-                
-        # Selected list to display based on UI toggle (Priority 2)
-        if "learning-to-rank" in ranking_mode.lower():
-            active_list = sorted(ranked_results, key=lambda x: (-x["ltr_score"], x["candidate_id"]))
-            for idx, it in enumerate(active_list):
-                it["display_score"] = it["ltr_score"]
-                it["display_rank"] = idx + 1
-        else:
-            active_list = ranked_results
-            for idx, it in enumerate(active_list):
-                it["display_score"] = it["hybrid_score"]
-                it["display_rank"] = idx + 1
-                
-        shortlist_100 = active_list[:100]
+        active_list, shortlist_100, baseline_ranks = get_ranked_shortlist()
         
         # Display rows
         display_rows = []
@@ -1931,7 +1895,8 @@ with tab1:
                 "Rank": item["display_rank"],
                 "ID": item["candidate_id"],
                 "Name": item["name"],
-                "Score": item["display_score"],
+                "Normalized Score (CSV)": item["display_score"],
+                "Raw Semantic Similarity": f"{(item['sim']*100):.1f}%",
                 "Hybrid Score": item["hybrid_score"],
                 "LTR Score": item["ltr_score"],
                 "Rank Delta (H vs L)": move_str,
@@ -1946,7 +1911,8 @@ with tab1:
             df,
             column_config={
                 "Rank": st.column_config.NumberColumn(format="%d"),
-                "Score": st.column_config.NumberColumn(format="%.4f"),
+                "Normalized Score (CSV)": st.column_config.NumberColumn(format="%.6f"),
+                "Raw Semantic Similarity": st.column_config.TextColumn(),
                 "Hybrid Score": st.column_config.NumberColumn(format="%.4f"),
                 "LTR Score": st.column_config.NumberColumn(format="%.4f"),
                 "Experience (YOE)": st.column_config.NumberColumn(format="%.1f")
@@ -1971,11 +1937,11 @@ with tab1:
         with col1:
             st.metric("Avg YOE", f"{df['Experience (YOE)'].mean():.1f} Years")
         with col2:
-            st.metric("Avg Match Score", f"{df['Score'].mean():.3f}")
+            st.metric("Avg Normalized Score (CSV)", f"{df['Normalized Score (CSV)'].mean():.4f}")
         with col3:
-            st.metric("Avg Hybrid Score", f"{df['Hybrid Score'].mean():.3f}")
+            st.metric("Avg Raw Semantic Sim", f"{df['Raw Semantic Similarity'].map(lambda x: float(x.replace('%', ''))).mean():.1f}%")
         with col4:
-            st.metric("Avg LTR Score", f"{df['LTR Score'].mean():.3f}")
+            st.metric("Avg Hybrid Score (Raw)", f"{df['Hybrid Score'].mean():.3f}")
             
     else:
         st.info("Click 'Run Matching Engine' in the sidebar / shortlist tab to populate candidate pool.")
@@ -2268,7 +2234,7 @@ with tab3:
                     q_lower = query.lower()
                     flags = item.get("honeypot_flags", [])
                     if "why" in q_lower or "rank" in q_lower or "score" in q_lower:
-                        response_text = f"**{item['name']}** is ranked **#{item['display_rank']}** with a normalized match score of **{(item['display_score']*100):.1f}%** (raw composite: {item.get('raw_score', item['display_score'])*100:.1f}%). Key factors: Semantic Match score is **{(item['sim']*100):.1f}%**, Skill Coverage score is **{(item['sk_score']*100):.1f}%** with {len(item['matched_skills'])} matched skills, and Production YOE is **{item['yoe']:.1f}** years. Honeypot risk is **{risk['level']}**."
+                        response_text = f"**{item['name']}** is ranked **#{item['display_rank']}** with a normalized submission score of **{item['display_score']:.6f}** (raw semantic similarity: **{(item['sim']*100):.1f}%**). Key factors: Skill Coverage score is **{(item['sk_score']*100):.1f}%** with {len(item['matched_skills'])} matched skills, and Production YOE is **{item['yoe']:.1f}** years. Honeypot risk is **{risk['level']}**."
                     elif "risk" in q_lower or "honeypot" in q_lower or "flag" in q_lower:
                         response_text = f"Hiring Risk is classified as **{risk['level']}** (risk score: {risk['score']:.1f}/100). Violations detected: {len(flags)} flags. Triggered: {', '.join(flags) if flags else 'None (Clean)'}."
                     elif "summary" in q_lower or "suitability" in q_lower or "career" in q_lower or "history" in q_lower:

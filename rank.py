@@ -1,4 +1,4 @@
-﻿import argparse
+import argparse
 import csv
 import json
 import os
@@ -973,6 +973,19 @@ def main():
     
     # 7. Shortlist top 100
     top_100 = final_scored_pool[:100]
+    if len(top_100) > 0:
+        max_raw = max(it["score"] for it in top_100)
+        min_raw = min(it["score"] for it in top_100)
+        range_raw = max_raw - min_raw
+        for it in top_100:
+            if range_raw > 0:
+                normalized = 0.50 + (it["score"] - min_raw) / range_raw * 0.49
+            else:
+                normalized = 0.99
+            it["score"] = round(normalized, 6)
+            
+        # Re-sort top_100 to guarantee monotonic non-increasing scores by rank and deterministic tie-breaks
+        top_100.sort(key=lambda x: (-x["score"], x["candidate_id"]))
     
     # Remaining candidates from top 1000 become rejected
     for item in final_scored_pool[100:]:
