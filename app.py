@@ -67,15 +67,15 @@ st.markdown("""
     }
     
     .profile-card:hover, div[data-testid="metric-container"]:hover, .custom-card:hover, .timeline-content:hover {
-        border-color: rgba(255, 75, 75, 0.4) !important;
+        border-color: rgba(59, 130, 246, 0.4) !important;
         box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03) !important;
     }
     
     /* Buttons / Indigo Accent styling */
     div.stButton > button {
-        background: linear-gradient(135deg, #ff4b4b 0%, #d32f2f 100%) !important;
+        background: #3b82f6 !important;
         color: #ffffff !important;
-        border: none !important;
+        border: 1px solid #3b82f6 !important;
         border-radius: 8px !important;
         padding: 8px 16px !important;
         font-weight: 600 !important;
@@ -84,8 +84,8 @@ st.markdown("""
     }
     
     div.stButton > button:hover {
-        background: linear-gradient(135deg, #d32f2f 0%, #b71c1c 100%) !important;
-        border-color: transparent !important;
+        background: #2563eb !important;
+        border-color: #2563eb !important;
         box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
     }
     
@@ -99,9 +99,9 @@ st.markdown("""
     /* Tabs custom styling */
     .stTabs [data-baseweb="tab"] {
         height: 38px !important;
-        background-color: transparent !important;
-        border: none !important;
-        border-radius: 0px !important;
+        background-color: #f1f5f9 !important;
+        border: 1px solid #e2e8f0 !important;
+        border-radius: 8px !important;
         font-weight: 500 !important;
         font-size: 13px !important;
         color: #64748b !important;
@@ -111,9 +111,10 @@ st.markdown("""
     }
     
     .stTabs [aria-selected="true"] {
-        background-color: #ffffff !important;
+        background-color: #3b82f6 !important;
         color: white !important;
-        border-bottom: none !important;
+        border: 1px solid #3b82f6 !important;
+        border-radius: 8px !important;
         font-weight: 600 !important;
         box-shadow: none !important;
     }
@@ -353,13 +354,13 @@ st.markdown("""
         border-radius: 8px !important;
     }
     div[data-testid="stFileUploaderDropzone"] button {
-        background: linear-gradient(135deg, #ff4b4b 0%, #d32f2f 100%) !important;
+        background: #3b82f6 !important;
         border: none !important;
         font-weight: 500 !important;
         box-shadow: none !important;
     }
     div[data-testid="stFileUploaderDropzone"] button:hover {
-        background: #4338ca !important;
+        background: #2563eb !important;
         transform: none !important;
         box-shadow: none !important;
     }
@@ -1292,8 +1293,8 @@ def get_radar_chart(categories_fit):
         theta=categories,
         fill='toself',
         name='Candidate Fit',
-        line_color='#ff4b4b',
-        fillcolor='rgba(255, 75, 75, 0.2)'
+        line_color='#3b82f6',
+        fillcolor='rgba(59, 130, 246, 0.2)'
     ))
     fig.update_layout(
         polar=dict(
@@ -1748,14 +1749,14 @@ def get_ranked_shortlist():
 
 # Tabs layout (Priority 3, 9, 11)
 tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8 = st.tabs([
-    "🎯 Talent Intelligence Hub",
-    "📊 AI Decision Intelligence",
-    "🧠 Recruiter Copilot",
-    "👥 Compare Candidates",
-    "🔍 Rejection Analysis",
-    "📈 Executive Dashboard",
-    "📊 Ranking Benchmark",
-    "⚙️ System Configuration"
+    "Talent Intelligence Hub",
+    "AI Decision Intelligence",
+    "Recruiter Copilot",
+    "Compare Candidates",
+    "Rejection Analysis",
+    "Executive Dashboard",
+    "Ranking Benchmark",
+    "System Configuration"
 ])
 
 with tab1:
@@ -2313,17 +2314,30 @@ with tab4:
                 
             # Polar radar chart
             st.markdown("### 🕸️ Multi-Dimensional Fit Comparison")
-            categories = ["Semantic Match", "Skill Coverage", "Production Exp", "AI Relevance", "Behavioral", "YOE Fit"]
+            categories = [
+                "Production Experience", "Skill Coverage", "Semantic Fit", 
+                "Security Confidence", "Education Fit", "Experience Match", "Behavioral Score"
+            ]
             fig_radar = go.Figure()
-            colors = ["#ff4b4b", "#3b82f6", "#10b981"]
+            colors = ["#38bdf8", "#a855f7", "#10b981"]
             for idx_c, item in enumerate(compare_items):
-                values = [item["sim"]*100, item["sk_score"]*100, item["p_score"]*100, 
-                          item["ai_score"]*100, item["b_score"]*100, item.get("yoe_score", 0.5)*100]
-                values.append(values[0])
+                # Calculate each dimension on 0-100 scale
+                sem_fit = min(100.0, float(item.get("sim", 0.0)) * 100.0)
+                sk_cov = min(100.0, float(item.get("sk_score", 0.0)) * 100.0)
+                prod_exp = min(100.0, float(item.get("p_score", 0.0)) * 100.0)
+                beh_score = min(100.0, float(item.get("b_score", 0.0)) * 100.0)
+                exp_match = min(100.0, float(item.get("yoe_score", 0.0)) * 100.0)
+                edu_fit = min(100.0, float(item.get("edu_score", 0.0)) * 100.0)
+                sec_conf = min(100.0, (1.0 - float(item.get("h_score", 0.0))) * 100.0)
+                
+                values = [prod_exp, sk_cov, sem_fit, sec_conf, edu_fit, exp_match, beh_score]
+                values_closed = values + [values[0]]
+                categories_closed = categories + [categories[0]]
+                
                 fig_radar.add_trace(go.Scatterpolar(
-                    r=values, theta=categories + [categories[0]],
+                    r=values_closed, theta=categories_closed,
                     fill='toself', name=f"{item['name']}", 
-                    line=dict(color=colors[idx_c % 3]),
+                    line=dict(color=colors[idx_c % len(colors)], width=2.5),
                     opacity=0.6
                 ))
             fig_radar.update_layout(
@@ -2343,13 +2357,13 @@ with tab4:
             html_table += "</tr>"
             
             metrics = [
-                ("Rank", lambda it: f"#{it.get('display_rank', 'N/A')}"),
+                ("Rank", lambda it: f"Rank #{it.get('display_rank', 'N/A')}"),
+                ("AI Match Score (Normalized)", lambda it: f"{(it['display_score']*100):.1f}%"),
                 ("Experience (YOE)", lambda it: f"{it['yoe']:.1f} Years"),
                 ("Semantic Similarity", lambda it: f"{(it['sim']*100):.1f}%"),
                 ("Skill Score", lambda it: f"{(it['sk_score']*100):.1f}%"),
-                ("Production Exp", lambda it: f"{(it['p_score']*100):.1f}%"),
-                ("AI Relevance", lambda it: f"{(it['ai_score']*100):.1f}%"),
-                ("Behavioral Score", lambda it: f"{(it['b_score']*100):.1f}%"),
+                ("Production Exp Score", lambda it: f"{(it['p_score']*100):.1f}%"),
+                ("AI Relevance Score", lambda it: f"{(it['ai_score']*100):.1f}%"),
             ]
             
             for name, fn in metrics:
