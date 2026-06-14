@@ -183,8 +183,8 @@ st.markdown("""
         border: none !important;
     }
     .rec-badge-hire {
-        background-color: #dbeafe !important;
-        color: #1d4ed8 !important;
+        background-color: #f0fdf4 !important;
+        color: #166534 !important;
         padding: 3px 8px !important;
         border-radius: 8px !important;
         font-size: 11px !important;
@@ -194,6 +194,24 @@ st.markdown("""
     .rec-badge-borderline {
         background-color: #fef9c3 !important;
         color: #854d0e !important;
+        padding: 3px 8px !important;
+        border-radius: 8px !important;
+        font-size: 11px !important;
+        font-weight: 500 !important;
+        border: none !important;
+    }
+    .rec-badge-weak-hire {
+        background-color: #ffedd5 !important;
+        color: #c2410c !important;
+        padding: 3px 8px !important;
+        border-radius: 8px !important;
+        font-size: 11px !important;
+        font-weight: 500 !important;
+        border: none !important;
+    }
+    .rec-badge-conditional {
+        background-color: #f1f5f9 !important;
+        color: #475569 !important;
         padding: 3px 8px !important;
         border-radius: 8px !important;
         font-size: 11px !important;
@@ -1133,18 +1151,17 @@ def get_copilot_recommendations(item):
     p_score = item["p_score"]
     b_score = item["b_score"]
     
-    if score >= 0.70:
-        recommendation = "Strong Hire"
-        color = "#818cf8"
-    elif score >= 0.55:
-        recommendation = "Hire"
-        color = "#4f46e5"
-    elif score >= 0.40:
-        recommendation = "Borderline"
-        color = "#ffca28"
+    rank = item.get("display_rank", item.get("hybrid_rank", 999))
+    if rank <= 100:
+        if rank <= 5:
+            recommendation = "Strong Hire"
+            color = "#15803d"
+        else:
+            recommendation = "Hire"
+            color = "#166534"
     else:
         recommendation = "Reject"
-        color = "#6366f1"
+        color = "#991b1b"
         
     summary = (
         f"Candidate {item['name']} exhibits strong credentials for this founding AI role. "
@@ -1770,6 +1787,20 @@ def get_ranked_shortlist():
     baseline_ranks = {item["candidate_id"]: item["hybrid_rank"] for item in ranked_results}
     return active_list, shortlist_100, baseline_ranks
 
+def get_recommendation_label(rank):
+    if rank <= 5:
+        return "Strong Hire"
+    elif rank <= 20:
+        return "Hire"
+    elif rank <= 50:
+        return "Borderline"
+    elif rank <= 80:
+        return "Weak Hire"
+    elif rank <= 100:
+        return "Conditional"
+    else:
+        return "Reject"
+
 # Tabs layout (Priority 3, 9, 11)
 tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8 = st.tabs([
     "Talent Intelligence Hub",
@@ -1895,6 +1926,7 @@ with tab1:
                 "Rank": item["display_rank"],
                 "ID": item["candidate_id"],
                 "Name": item["name"],
+                "Recommendation": get_recommendation_label(item["display_rank"]),
                 "Normalized Score (CSV)": item["display_score"],
                 "Raw Semantic Similarity": f"{(item['sim']*100):.1f}%",
                 "Hybrid Score": item["hybrid_score"],
@@ -1911,6 +1943,7 @@ with tab1:
             df,
             column_config={
                 "Rank": st.column_config.NumberColumn(format="%d"),
+                "Recommendation": st.column_config.TextColumn(),
                 "Normalized Score (CSV)": st.column_config.NumberColumn(format="%.6f"),
                 "Raw Semantic Similarity": st.column_config.TextColumn(),
                 "Hybrid Score": st.column_config.NumberColumn(format="%.4f"),
@@ -2094,7 +2127,6 @@ with tab3:
             col_cop_l, col_cop_mid, col_cop_r = st.columns([1.1, 0.9, 1.1])
             
             with col_cop_l:
-                # Recommendation badge mapping
                 rec_val = copilot['rec']
                 if rec_val == "Strong Hire":
                     rec_pill_html = f"<span class='rec-badge-strong'>Strong Hire</span>"
@@ -2102,8 +2134,12 @@ with tab3:
                     rec_pill_html = f"<span class='rec-badge-hire'>Hire</span>"
                 elif rec_val == "Borderline":
                     rec_pill_html = f"<span class='rec-badge-borderline'>Borderline</span>"
+                elif rec_val == "Weak Hire":
+                    rec_pill_html = f"<span class='rec-badge-weak-hire'>Weak Hire</span>"
+                elif rec_val == "Conditional":
+                    rec_pill_html = f"<span class='rec-badge-conditional'>Conditional</span>"
                 else:
-                    rec_pill_html = f"<span class='rec-badge-weak'>{rec_val}</span>"
+                    rec_pill_html = f"<span class='rec-badge-reject'>{rec_val}</span>"
 
                 # Risk badge mapping
                 risk_lvl = risk['level']
@@ -2366,7 +2402,7 @@ with tab5:
                 
                 if search_query_clean in cid or search_query_clean in name:
                     found = True
-                    st.markdown(f"### Candidate: **{item['name']}** ({item['candidate_id']})")
+                    st.markdown(f"### Candidate: **{item['name']}** ({item['candidate_id']}) <span class='rec-badge-reject'>Reject</span>", unsafe_allow_html=True)
                     reasons = analyze_rejection_reasons(item)
                     st.markdown("#### Rejection Checklist Reasons:")
                     for r in reasons:
@@ -2379,7 +2415,7 @@ with tab5:
             for cid, details in precalc_rej_db.items():
                 if search_query_clean in cid.lower() or search_query_clean in details.get("name", "").lower():
                     found = True
-                    st.markdown(f"### Candidate: **{details['name']}** ({cid})")
+                    st.markdown(f"### Candidate: **{details['name']}** ({cid}) <span class='rec-badge-reject'>Reject</span>", unsafe_allow_html=True)
                     st.markdown("#### Rejection Checklist Reasons:")
                     for r in details.get("reasons", []):
                         st.markdown(f"- {r}")
