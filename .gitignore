@@ -1,12 +1,8 @@
 model/
 __pycache__/
+*.pyc
 *.tmp
-app_prev.py
-app_recovered.py
-app_redesigned.py
-app_from_commit.py
-diff.txt
-diff_prev_commit.txt
-new_css.txt
-check.py
-scores*
+*.log
+.env
+.venv/
+how_to_win_hackathon.md

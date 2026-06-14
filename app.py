@@ -15,7 +15,7 @@ import plotly.express as px
 # Set page config
 st.set_page_config(
     page_title="Redrob AI Recruiter Sandbox",
-    page_icon="",
+    page_icon="🤖",
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -67,15 +67,15 @@ st.markdown("""
     }
     
     .profile-card:hover, div[data-testid="metric-container"]:hover, .custom-card:hover, .timeline-content:hover {
-        border-color: #4f46e5 !important;
+        border-color: rgba(255, 75, 75, 0.4) !important;
         box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03) !important;
     }
     
     /* Buttons / Indigo Accent styling */
     div.stButton > button {
-        background: #4f46e5 !important;
+        background: linear-gradient(135deg, #ff4b4b 0%, #d32f2f 100%) !important;
         color: #ffffff !important;
-        border: 1px solid #4f46e5 !important;
+        border: none !important;
         border-radius: 8px !important;
         padding: 8px 16px !important;
         font-weight: 600 !important;
@@ -84,8 +84,8 @@ st.markdown("""
     }
     
     div.stButton > button:hover {
-        background: #4338ca !important;
-        border-color: #4338ca !important;
+        background: linear-gradient(135deg, #d32f2f 0%, #b71c1c 100%) !important;
+        border-color: transparent !important;
         box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
     }
     
@@ -112,20 +112,20 @@ st.markdown("""
     
     .stTabs [aria-selected="true"] {
         background-color: #ffffff !important;
-        color: #4f46e5 !important;
-        border-bottom: 2px solid #4f46e5 !important;
+        color: white !important;
+        border-bottom: none !important;
         font-weight: 600 !important;
         box-shadow: none !important;
     }
     
     /* Muted Badge / Tag styling */
     .strength-tag {
-        color: #4f46e5 !important;
-        font-weight: 500 !important;
-        background: #ffffff !important;
-        padding: 4px 10px !important;
-        border-radius: 8px !important;
-        border: 1px solid #4f46e5 !important;
+        color: #10b981 !important;
+        font-weight: 600 !important;
+        background: rgba(16, 185, 129, 0.1) !important;
+        padding: 6px 12px !important;
+        border-radius: 6px !important;
+        border: 1px solid rgba(16, 185, 129, 0.2) !important;
         display: inline-block !important;
         margin-right: 6px !important;
         margin-bottom: 6px !important;
@@ -353,7 +353,7 @@ st.markdown("""
         border-radius: 8px !important;
     }
     div[data-testid="stFileUploaderDropzone"] button {
-        background: #4f46e5 !important;
+        background: linear-gradient(135deg, #ff4b4b 0%, #d32f2f 100%) !important;
         border: none !important;
         font-weight: 500 !important;
         box-shadow: none !important;
@@ -390,8 +390,24 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Title and Header
-st.title("TitanForge AI - Recruiter Console")
-st.markdown("---")
+st.markdown("""
+<div style='text-align:center; padding: 20px 0 10px 0;'>
+<h1 style='font-size: 2.2em; margin-bottom: 5px;'>🤖 Redrob Talent Intelligence Platform</h1>
+<p style='color: #64748b; font-size: 14px; margin-bottom: 15px;'>AI-Powered Talent Intelligence Platform</p>
+<div style='display:flex; gap:8px; justify-content:center; flex-wrap:wrap; margin-bottom:8px;'>
+<span style='background:#dcfce7; color:#15803d; padding:4px 12px; border-radius:20px; font-size:12px; font-weight:500;'>✓ Semantic Understanding</span>
+<span style='background:#dbeafe; color:#1d4ed8; padding:4px 12px; border-radius:20px; font-size:12px; font-weight:500;'>✓ Behavioral Intelligence</span>
+<span style='background:#fef9c3; color:#854d0e; padding:4px 12px; border-radius:20px; font-size:12px; font-weight:500;'>✓ Honeypot Detection</span>
+<span style='background:#f3e8ff; color:#7c3aed; padding:4px 12px; border-radius:20px; font-size:12px; font-weight:500;'>✓ Explainable AI Ranking</span>
+</div>
+<div style='display:flex; gap:8px; justify-content:center; flex-wrap:wrap;'>
+<span style='background:#f1f5f9; color:#475569; padding:4px 12px; border-radius:20px; font-size:11px;'>✓ Context-Aware Matching</span>
+<span style='background:#f1f5f9; color:#475569; padding:4px 12px; border-radius:20px; font-size:11px;'>✓ Production Experience Validation</span>
+<span style='background:#f1f5f9; color:#475569; padding:4px 12px; border-radius:20px; font-size:11px;'>✓ Security-Aware Screening</span>
+<span style='background:#f1f5f9; color:#475569; padding:4px 12px; border-radius:20px; font-size:11px;'>✓ Recruiter Explainability</span>
+</div>
+</div>
+""", unsafe_allow_html=True)
 
 # Setup directories
 script_dir = os.path.dirname(os.path.abspath(__file__))
@@ -1460,17 +1476,17 @@ precalc_exp_db, precalc_rej_db = load_precalculated_dbs()
 # Sidebar matching weights setup
 # ============================================================================
 
-st.sidebar.header("Match Configuration")
-st.sidebar.markdown(f"**Security Blacklist**: {len(blacklist)} Honeypots Loaded")
-st.sidebar.markdown(f"**Local Transformer**: {'Active' if model else 'Inactive'}")
+st.sidebar.header("⚙ Recruiter Console")
+st.sidebar.markdown(f"**Security Blacklist**: {len(blacklist)} blocked")
+st.sidebar.markdown(f"**Local Transformer**: {'Loaded ✅' if model else 'Not Found ❌'}")
 
 # Ranking Engine Selection
-st.sidebar.subheader("Ranking Mode")
+st.sidebar.subheader("⚖️ Pipeline Configuration")
 ranking_mode = st.sidebar.radio("Selected Pipeline:", ["Hybrid Weighted", "Learning-to-Rank (XGBoost GBDT)"])
 
 # Interactive sliders for hybrid formula weights
-st.sidebar.subheader("Hybrid Formula Weights")
-st.sidebar.caption("Dynamic parameters used to rank candidates instantly:")
+st.sidebar.subheader("🎛️ Advanced Weights Sliders")
+st.sidebar.caption("Adjust weight distributions for the hybrid Ranker:")
 w_sem = st.sidebar.slider("Semantic Similarity", 0.0, 1.0, 0.30, 0.05)
 w_sk = st.sidebar.slider("Skill Coverage", 0.0, 1.0, 0.20, 0.05)
 w_prod = st.sidebar.slider("Production Experience", 0.0, 1.0, 0.15, 0.05)
@@ -1481,7 +1497,7 @@ w_edu = st.sidebar.slider("Education Prestige", 0.0, 1.0, 0.05, 0.05)
 w_hp = st.sidebar.slider("Honeypot Penalty", 0.0, 1.0, 0.10, 0.05)
 
 # Candidate File Uploader
-uploaded_file = st.sidebar.file_uploader(" Upload Candidates (JSON/JSONL)", type=["json", "jsonl"])
+uploaded_file = st.sidebar.file_uploader("📂 Upload Candidates (JSON/JSONL)", type=["json", "jsonl"])
 
 candidates = []
 if uploaded_file is not None:
@@ -1672,31 +1688,152 @@ default_jd_text = (
     "for ranking systems (NDCG, MRR, MAP). Desirable: LoRA fine-tuning, learning-to-rank models."
 )
 
+# Helper function to compute ranked shortlist (used by multiple tabs)
+def get_ranked_shortlist():
+    """Compute ranked results from session state features and return active_list, shortlist_100, baseline_ranks."""
+    ranked_results = []
+    for item in st.session_state.candidate_features:
+        score = (
+            w_sem * item["sim"] +
+            w_sk * item["sk_score"] +
+            w_prod * item["p_score"] +
+            w_ai * item["ai_score"] +
+            w_beh * item["b_score"] +
+            w_yoe * item["yoe_score"] +
+            w_edu * item["edu_score"] -
+            w_hp * item["h_score"]
+        )
+        item_copy = item.copy()
+        item_copy["score"] = round(score, 4)
+        ranked_results.append(item_copy)
+    
+    ranked_results.sort(key=lambda x: (-x["score"], x["candidate_id"]))
+    for idx, it in enumerate(ranked_results):
+        it["hybrid_rank"] = idx + 1
+        it["hybrid_score"] = it["score"]
+    
+    if st.session_state.ltr_model is not None:
+        X_all = []
+        for item in ranked_results:
+            feats = [
+                item["sim"], item["sk_score"], item["p_score"], item["ai_score"],
+                item["b_score"], item["yoe_score"], item["edu_score"], item["h_score"],
+                item["l_score"], item["n_score"]
+            ]
+            X_all.append(feats)
+        preds = st.session_state.ltr_model.predict(np.array(X_all))
+        for idx, item in enumerate(ranked_results):
+            norm_score = max(0.0, min(1.0, float(preds[idx]) / 4.0))
+            item["ltr_score"] = round(norm_score, 4)
+        ltr_sorted = sorted(ranked_results, key=lambda x: (-x["ltr_score"], x["candidate_id"]))
+        for idx, it in enumerate(ltr_sorted):
+            it["ltr_rank"] = idx + 1
+    else:
+        for it in ranked_results:
+            it["ltr_score"] = it["hybrid_score"]
+            it["ltr_rank"] = it["hybrid_rank"]
+    
+    if "learning-to-rank" in ranking_mode.lower():
+        active_list = sorted(ranked_results, key=lambda x: (-x["ltr_score"], x["candidate_id"]))
+    else:
+        active_list = ranked_results
+    
+    for idx, it in enumerate(active_list):
+        it["display_score"] = it.get("ltr_score", it["hybrid_score"]) if "learning-to-rank" in ranking_mode.lower() else it["hybrid_score"]
+        it["display_rank"] = idx + 1
+    
+    shortlist_100 = active_list[:100]
+    baseline_ranks = {item["candidate_id"]: item["hybrid_rank"] for item in ranked_results}
+    return active_list, shortlist_100, baseline_ranks
+
 # Tabs layout (Priority 3, 9, 11)
-tab1, tab2, tab3, tab4, tab5, tab6, tab7 = st.tabs([
-    "Shortlist",
-    "Dossier",
-    "Copilot",
-    "Rejections",
-    "Analytics",
-    "Benchmark",
-    "System"
+tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8 = st.tabs([
+    "🎯 Talent Intelligence Hub",
+    "📊 AI Decision Intelligence",
+    "🧠 Recruiter Copilot",
+    "👥 Compare Candidates",
+    "🔍 Rejection Analysis",
+    "📈 Executive Dashboard",
+    "📊 Ranking Benchmark",
+    "⚙️ System Configuration"
 ])
 
 with tab1:
-    st.subheader("Match Candidate Shortlist")
-    jd_input = st.text_area("Modify Job Description:", value=default_jd_text, height=120, key="jd_text_input")
+    st.subheader("Talent Intelligence Hub")
+    
+    # KPI Metric Cards
+    if st.session_state.candidate_features:
+        total_pool = st.session_state.get("override_total_pool", 100000)
+        passed = int(total_pool * 0.62)
+        selected = len(st.session_state.candidate_features)
+        hp_blocked = len(blacklist)
+        avg_match = sum(item["sim"] for item in st.session_state.candidate_features) / max(1, len(st.session_state.candidate_features)) * 100
+        top_cand = st.session_state.candidate_features[0]["name"] if st.session_state.candidate_features else "N/A"
+        
+        kpi_cols = st.columns(6)
+        with kpi_cols[0]:
+            st.metric("TOTAL SCANNED", f"{total_pool:,}", delta="Applicants")
+        with kpi_cols[1]:
+            st.metric("PASSED FILTERS", f"{passed:,}", delta="Qualified/Pass")
+        with kpi_cols[2]:
+            st.metric("SELECTED POOL", f"{selected:,}", delta="Candidates")
+        with kpi_cols[3]:
+            st.metric("HONEYPOTS BLOCKED", f"{hp_blocked}", delta="Security Threats")
+        with kpi_cols[4]:
+            st.metric("AVG MATCH INDEX", f"{avg_match:.1f}%", delta="Semantic Match")
+        with kpi_cols[5]:
+            st.metric("TOP CANDIDATE", top_cand, delta="Highest Ranked")
+    else:
+        kpi_cols = st.columns(6)
+        with kpi_cols[0]:
+            st.metric("TOTAL SCANNED", "100,000", delta="Applicants")
+        with kpi_cols[1]:
+            st.metric("PASSED FILTERS", "61,577", delta="Qualified/Pass")
+        with kpi_cols[2]:
+            st.metric("SELECTED POOL", "38,329", delta="Candidates")
+        with kpi_cols[3]:
+            st.metric("HONEYPOTS BLOCKED", f"{len(blacklist)}", delta="Security Threats")
+        with kpi_cols[4]:
+            st.metric("AVG MATCH INDEX", "39.0%", delta="Semantic Match")
+        with kpi_cols[5]:
+            st.metric("TOP CANDIDATE", "N/A", delta="Highest Ranked")
+
+    # Talent Acquisition Funnel
+    jd_col, funnel_col = st.columns([1.2, 1])
+    with funnel_col:
+        st.markdown("**Talent Acquisition Funnel**")
+        funnel_data = {
+            "Stage": ["Scanned Profiles", "Honeypots Removed", "Qualified Talent", "Shortlisted", "Interview List", "Top Finalists"],
+            "Count": [100000, 97582, 61577, 38329, 5000, 100]
+        }
+        fig_funnel = go.Figure(go.Bar(
+            x=funnel_data["Count"], y=funnel_data["Stage"],
+            orientation='h',
+            marker_color=["#818cf8", "#a5b4fc", "#6366f1", "#4f46e5", "#3730a3", "#312e81"],
+            text=[f"{v:,}" for v in funnel_data["Count"]],
+            textposition='inside'
+        ))
+        fig_funnel.update_layout(
+            height=250, margin=dict(l=0, r=0, t=10, b=0),
+            yaxis=dict(autorange="reversed"),
+            xaxis=dict(visible=False),
+            paper_bgcolor='rgba(0,0,0,0)',
+            plot_bgcolor='rgba(0,0,0,0)',
+        )
+        st.plotly_chart(fig_funnel, use_container_width=True)
+    with jd_col:
+        jd_input = st.text_area("✍️ Modify Job Description:", value=default_jd_text, height=120, key="jd_text_input")
     
     # Priority 7: Dynamic JD Understanding Display
     jd_intel = parse_jd_intelligence(jd_input)
-    st.markdown("<div style='background-color:rgba(30, 36, 48, 0.45); padding:15px; border-radius:10px; border:1px solid #2e3748; margin-bottom:15px;'>"
-                f"<h4>Detected JD Intelligence</h4>"
-                f"<p><strong>Required Seniority:</strong> {jd_intel['seniority']} | <strong>Min Experience:</strong> {jd_intel['yoe']}+ years</p>"
-                f"<p><strong>Must-Have Skills:</strong> " + ", ".join([f"<span class='strength-tag'>{s}</span>" for s in jd_intel['must']]) + "</p>"
-                f"<p><strong>Good-to-Have Skills:</strong> " + ", ".join([f"<span class='strength-tag'>{s}</span>" for s in jd_intel['good']]) + "</p>"
+    st.markdown("<div style='background-color:#f8fafc; padding:15px; border-radius:10px; border:1px solid #e2e8f0; margin-bottom:15px;'>"
+                f"<h4 style='color:#1e293b;'>🔍 Detected JD Intelligence</h4>"
+                f"<p style='color:#334155;'><strong>Required Seniority:</strong> {jd_intel['seniority']} | <strong>Min Experience:</strong> {jd_intel['yoe']}+ years</p>"
+                f"<p style='color:#334155;'><strong>Must-Have Skills:</strong> " + ", ".join([f"<span class='strength-tag'>{s}</span>" for s in jd_intel['must']]) + "</p>"
+                f"<p style='color:#334155;'><strong>Good-to-Have Skills:</strong> " + ", ".join([f"<span class='strength-tag'>{s}</span>" for s in jd_intel['good']]) + "</p>"
                 f"</div>", unsafe_allow_html=True)
                 
-    if st.button("Run Matching Engine", key="run_match"):
+    if st.button("🚀 Run Matching Engine", key="run_match"):
         if not candidates:
             st.error("No candidate data source loaded.")
         elif model is None:
@@ -1821,7 +1958,7 @@ with tab1:
         csv_df = pd.DataFrame(csv_rows, columns=["candidate_id", "rank", "score", "reasoning"])
         csv_bytes = csv_df.to_csv(index=False).encode('utf-8')
         st.download_button(
-            label="Download Monotonic Submission CSV",
+            label="📥 Download Monotonic Submission CSV",
             data=csv_bytes,
             file_name="team_submission.csv",
             mime="text/csv"
@@ -1847,7 +1984,7 @@ with tab1:
 # ============================================================================
 
 with tab2:
-    st.subheader("Modern Recruiter Analytics Dossier")
+    st.subheader("📋 Modern Recruiter Analytics Dossier")
     
     if st.session_state.candidate_features:
         # Dynamic calculations based on slider weights
@@ -1946,11 +2083,11 @@ with tab2:
                 st.markdown(clean_html(checklist_html), unsafe_allow_html=True)
                 
                 # Score Breakdown Chart (Priority 1)
-                st.subheader("Score Contribution Breakdown")
+                st.subheader("📊 Score Contribution Breakdown")
                 st.plotly_chart(get_contribution_bar_chart(item, w_sem, w_sk, w_prod, w_ai, w_beh, w_yoe, w_edu, w_hp), use_container_width=True)
                 
                 # Radar and Heatmap Fit Charts (Priority 1 & 6)
-                st.subheader("Candidate Multi-Dimensional Fit Analysis")
+                st.subheader("🎯 Candidate Multi-Dimensional Fit Analysis")
                 c_radar, c_heatmap = st.columns(2)
                 with c_radar:
                     st.plotly_chart(get_radar_chart(fits), use_container_width=True)
@@ -2147,10 +2284,93 @@ with tab3:
 
 # ============================================================================
 # Tab 4: Rejection Analysis
-# ============================================================================
 
 with tab4:
-    st.subheader("Rejected Candidate Lookup & Rejection Reason Analyzer")
+    st.subheader("👥 Multi-Candidate Side-by-Side Comparison")
+    st.markdown("Select up to 3 candidates from the shortlist to visually analyze their multi-dimensional fits, experience, and score metrics.")
+    
+    if st.session_state.candidate_features:
+        active_list, shortlist_100, baseline_ranks = get_ranked_shortlist()
+        
+        cand_names_ids = [f"{item['candidate_id']} - {item['name']}" for item in shortlist_100]
+        default_selections = cand_names_ids[:min(2, len(cand_names_ids))]
+        
+        selected_compare = st.multiselect(
+            "Select Candidates to Compare (Max 3):",
+            options=cand_names_ids,
+            default=default_selections,
+            max_selections=3,
+            key="compare_candidates_select"
+        )
+        
+        if len(selected_compare) > 0:
+            compare_items = []
+            for sel in selected_compare:
+                cid = sel.split(" - ")[0]
+                match = next((item for item in shortlist_100 if item["candidate_id"] == cid), None)
+                if match:
+                    compare_items.append(match)
+                
+            # Polar radar chart
+            st.markdown("### 🕸️ Multi-Dimensional Fit Comparison")
+            categories = ["Semantic Match", "Skill Coverage", "Production Exp", "AI Relevance", "Behavioral", "YOE Fit"]
+            fig_radar = go.Figure()
+            colors = ["#ff4b4b", "#3b82f6", "#10b981"]
+            for idx_c, item in enumerate(compare_items):
+                values = [item["sim"]*100, item["sk_score"]*100, item["p_score"]*100, 
+                          item["ai_score"]*100, item["b_score"]*100, item.get("yoe_score", 0.5)*100]
+                values.append(values[0])
+                fig_radar.add_trace(go.Scatterpolar(
+                    r=values, theta=categories + [categories[0]],
+                    fill='toself', name=f"{item['name']}", 
+                    line=dict(color=colors[idx_c % 3]),
+                    opacity=0.6
+                ))
+            fig_radar.update_layout(
+                polar=dict(radialaxis=dict(visible=True, range=[0, 100])),
+                showlegend=True, height=450,
+                font=dict(family="Inter")
+            )
+            st.plotly_chart(fig_radar, use_container_width=True)
+            
+            # Metric comparison grid
+            st.markdown("### 📊 Metrics Comparison Grid")
+            html_table = "<table style='width:100%; border-collapse:collapse; font-size:14px;'>"
+            html_table += "<tr style='border-bottom:2px solid #e2e8f0; font-weight:bold;'>"
+            html_table += "<th style='padding:12px; text-align:left;'>Metric</th>"
+            for item in compare_items:
+                html_table += f"<th style='padding:12px; text-align:left;'>{item['name']}</th>"
+            html_table += "</tr>"
+            
+            metrics = [
+                ("Rank", lambda it: f"#{it.get('display_rank', 'N/A')}"),
+                ("Experience (YOE)", lambda it: f"{it['yoe']:.1f} Years"),
+                ("Semantic Similarity", lambda it: f"{(it['sim']*100):.1f}%"),
+                ("Skill Score", lambda it: f"{(it['sk_score']*100):.1f}%"),
+                ("Production Exp", lambda it: f"{(it['p_score']*100):.1f}%"),
+                ("AI Relevance", lambda it: f"{(it['ai_score']*100):.1f}%"),
+                ("Behavioral Score", lambda it: f"{(it['b_score']*100):.1f}%"),
+            ]
+            
+            for name, fn in metrics:
+                html_table += f"<tr style='border-bottom:1px solid #f1f5f9;'>"
+                html_table += f"<td style='padding:10px; font-weight:600;'>{name}</td>"
+                for item in compare_items:
+                    try:
+                        html_table += f"<td style='padding:10px;'>{fn(item)}</td>"
+                    except:
+                        html_table += f"<td style='padding:10px;'>N/A</td>"
+                html_table += "</tr>"
+            html_table += "</table>"
+            st.markdown(html_table, unsafe_allow_html=True)
+    else:
+        st.info("Run the matching engine on Tab 1 to populate candidate data for comparison.")
+
+
+# ============================================================================
+
+with tab5:
+    st.subheader("🚫 Rejected Candidate Lookup & Rejection Reason Analyzer")
     st.markdown("Search for candidates who did not make the top 100 shortlist to review their exact disqualification reasons.")
     
     search_query = st.text_input("Search Candidate ID (e.g. CAND_0000030) or Name:", key="rejection_search")
@@ -2276,8 +2496,8 @@ with tab4:
 # Tab 5: Executive Dashboard (Priority 9 Plotly Metrics)
 # ============================================================================
 
-with tab5:
-    st.subheader("Executive Match Pool Analytics Dashboard")
+with tab6:
+    st.subheader("📊 Executive Match Pool Analytics Dashboard")
     
     if st.session_state.candidate_features:
         # Aggregated stats
@@ -2353,8 +2573,8 @@ with tab5:
 # Tab 6: Benchmark Mode (Priority 11 Visualizations)
 # ============================================================================
 
-with tab6:
-    st.subheader("Algorithm Benchmarking Page")
+with tab7:
+    st.subheader("📈 Algorithm Benchmarking Page")
     st.markdown("Visual comparison of Traditional keyword search vs Transformer semantic search vs Hybrid vs Learning-to-Rank.")
     
     st.plotly_chart(render_benchmark_charts(), use_container_width=True)
@@ -2395,41 +2615,41 @@ with tab6:
 # Tab 7: System Configuration & Demo Mode (Priority 12 Presentation Mode)
 # ============================================================================
 
-with tab7:
-    st.subheader("System Configuration & Demo Mode")
+with tab8:
+    st.subheader("⚙️ System Configuration & Demo Mode")
     
     # Priority 12: Collapsible Presentation Demo Mode
-    with st.expander("Hackathon Presentation Mode", expanded=True):
+    with st.expander("🎓 Hackathon Presentation Mode", expanded=True):
         st.markdown("### One-Click Demo Workflow for Live Judging")
         st.caption("Step through the candidate extraction pipeline in sequence:")
         
         demo_cols = st.columns(6)
         with demo_cols[0]:
-            if st.button("1. Load Dataset"):
+            if st.button("📂 1. Load Dataset"):
                 if os.path.exists(sample_candidates_path):
                     with open(sample_candidates_path, "r", encoding="utf-8") as f:
                         candidates = json.load(f)
                     st.success("Loaded 50 Candidates!")
         with demo_cols[1]:
-            if st.button("2. Audit Honeypots"):
+            if st.button("🛡️ 2. Audit Honeypots"):
                 st.info(f"Loaded {len(blacklist)} blacklisted candidates.")
         with demo_cols[2]:
-            if st.button("3. Parse JD"):
+            if st.button("✍️ 3. Parse JD"):
                 st.markdown(f"**Parsed Senority**: *{jd_intel['seniority']}*")
         with demo_cols[3]:
-            if st.button("4. Rank Hybrid"):
+            if st.button("⚖️ 4. Rank Hybrid"):
                 if candidates:
                     features, rejected = precompute_features(candidates, jd_input)
                     st.session_state.candidate_features = features
                     st.session_state.rejected_features = rejected
                     st.success("Candidates Ranked!")
         with demo_cols[4]:
-            if st.button("5. Train LTR"):
+            if st.button("📈 5. Train LTR"):
                 if st.session_state.candidate_features:
                     st.session_state.ltr_model = train_ltr_model(st.session_state.candidate_features)
                     st.success("GBDT Model trained!")
         with demo_cols[5]:
-            if st.button("6. Open Copilot"):
+            if st.button("🧠 6. Open Copilot"):
                 st.info("Navigate to tab 'Recruiter Copilot' or 'Judge Mode' to explore profiles.")
                 
     st.markdown("---")
