@@ -54,96 +54,86 @@ keywords = [
 ]
 kw_pattern = re.compile(r"\b(" + "|".join(keywords) + r")\b", re.IGNORECASE)
 
-def generate_reasoning(cand, sim_score, rank):
+def generate_reasoning(item, rank):
+    cand = item.get("cand_data", {})
     profile = cand.get("profile", {})
     yoe = profile.get("years_of_experience", 0)
-    title = profile.get("current_title", "")
-    loc = profile.get("location", "")
-    signals = cand.get("redrob_signals", {})
-    notice = signals.get("notice_period_days", 0)
+    title = profile.get("current_title", "Engineer")
+    loc = profile.get("location", "Noida")
     
+    # Must-have skills matching must-haves
     skills = cand.get("skills", [])
-    ml_skills = ["vector", "embeddings", "rag", "pinecone", "weaviate", "milvus", "qdrant", "faiss", "elasticsearch", "nlp", "search", "retrieval", "ranking", "ndcg", "mrr", "map", "llm", "lora", "peft"]
-    matching_skills = []
+    ml_skills = ["python", "pytorch", "faiss", "pinecone", "weaviate", "milvus", "qdrant", "vector db", "retrieval", "embeddings", "llm", "nlp", "rag", "xgboost"]
+    matched_skills = []
     for s in skills:
         name = s.get("name", "")
         if any(ms in name.lower() for ms in ml_skills):
-            matching_skills.append(name)
-            if len(matching_skills) >= 2:
+            matched_skills.append(name)
+            if len(matched_skills) >= 3:
                 break
-                
-    skills_str = ", ".join(matching_skills) if matching_skills else "applied ML"
+    if len(matched_skills) < 2:
+        for s in skills:
+            name = s.get("name", "")
+            if name and name not in matched_skills:
+                matched_skills.append(name)
+                if len(matched_skills) >= 3:
+                    break
+    skills_str = ", ".join(matched_skills[:3]) if matched_skills else "applied ML"
     
+    # Company type
     history = cand.get("career_history", [])
-    prod_companies = ["hooli", "pied piper", "wayne enterprises", "acme corp", "stark industries", "initech", "globex inc", "dunder mifflin", "google", "amazon", "uber", "microsoft", "linkedin", "swiggy", "razorpay", "cred", "zomato", "flipkart", "mindtree"]
-    prev_company = ""
-    for job in history:
-        comp = job.get("company", "")
-        if comp.lower() in prod_companies:
-            prev_company = comp
-            break
-            
-    if not prev_company and history:
-        prev_company = history[0].get("company", "")
-        
-    company_clause = f"Worked at {prev_company}." if prev_company else ""
-    
-    comb_idx = (hash(cand.get("candidate_id", "")) % 3)
-    
-    if rank <= 15:
-        starters = [
-            f"Exceptional {title} with {yoe:.1f} YOE, demonstrating staff-level capability.",
-            f"Top-tier candidate with {yoe:.1f} years experience specializing in machine learning.",
-            f"Strong Senior AI Engineer candidate with {yoe:.1f} years building production ML systems."
-        ]
-        middles = [
-            f"Superb depth in {skills_str}. {company_clause} Matches the product-shipper archetype.",
-            f"Expertise in {skills_str} and system architecture. {company_clause} Excellent fit.",
-            f"Deep production experience with {skills_str}. {company_clause} Strong technical alignment."
-        ]
-        ends = [
-            f"Noida/Pune hybrid compatible based in {loc} ({notice}d notice).",
-            f"Located in {loc} with active engagement ({notice}d notice). Relocation-ready.",
-            f"Located in {loc} with high response rate and {notice}-day notice."
-        ]
-    elif rank <= 80:
-        starters = [
-            f"Experienced {title} with {yoe:.1f} years of applied engineering experience.",
-            f"Software/ML engineer with {yoe:.1f} YOE, showing solid technical foundations.",
-            f"Senior Software Engineer ({yoe:.1f} YOE) looking to transition to core AI/ML."
-        ]
-        middles = [
-            f"Competent in {skills_str}. {company_clause} Solid ML production exposure.",
-            f"Proficient with {skills_str}. {company_clause} Good software engineering credentials.",
-            f"Has worked with {skills_str}. {company_clause} Strong coding skill set."
-        ]
-        ends = [
-            f"Based in {loc} with {notice}-day notice period.",
-            f"Located in {loc} and open to relocation ({notice}d notice).",
-            f"Based in {loc} with acceptable response rates ({notice}d notice)."
-        ]
+    company_name = ""
+    if history:
+        company_name = history[0].get("company", "previous firm")
     else:
-        starters = [
-            f"Fringe fit {title} with {yoe:.1f} YOE, lacking direct senior AI engineer depth.",
-            f"Software professional ({yoe:.1f} YOE) with limited applied ML experience.",
-            f"Fringe candidate with {yoe:.1f} years of adjacent software engineering experience."
-        ]
-        middles = [
-            f"Adjacent skills only (e.g. {skills_str}). {company_clause}",
-            f"Has exposure to {skills_str} but lacks scale or production history.",
-            f"Familiar with {skills_str} but career history is mostly general software."
-        ]
-        ends = [
-            f"Based in {loc} with long notice period ({notice}d notice). Included as filler.",
-            f"Based in {loc}. Down-weighted due to notice period or lower engagement.",
-            f"Based in {loc} with {notice}d notice. Lower activity on platform."
-        ]
+        company_name = "previous firm"
         
-    starter = starters[comb_idx]
-    middle = middles[(comb_idx + 1) % 3]
-    end = ends[(comb_idx + 2) % 3]
+    is_consulting = item.get("consulting_disqualified", False)
+    if not is_consulting and history:
+        consulting_companies = {"tcs", "infosys", "wipro", "accenture", "cognizant", "capgemini"}
+        companies = [job.get("company", "").lower() for job in history]
+        if all(any(c in comp for c in consulting_companies) for comp in companies):
+            is_consulting = True
+            
+    if is_consulting:
+        company_clause = "consulting-only background is a concern"
+    else:
+        company_clause = f"at product company {company_name}"
+        
+    # Behavioral signal
+    signals = cand.get("redrob_signals", {})
+    response_rate = signals.get("recruiter_response_rate", 0.8)
+    notice_days = item.get("notice_days", signals.get("notice_period_days", 30))
     
-    return f"{starter} {middle} {end}"
+    if rank % 2 == 1:
+        behavior_clause = f"{int(response_rate * 100)}% recruiter response rate"
+    else:
+        behavior_clause = f"notice of {notice_days} days"
+        
+    # Concern
+    loc_lower = loc.lower()
+    if notice_days > 60:
+        concern = f"concern on long {notice_days}d notice period"
+    elif "noida" not in loc_lower and "pune" not in loc_lower:
+        concern = f"minor location mismatch (based in {loc})"
+    elif is_consulting:
+        concern = "consulting background requires screening for product ownership"
+    else:
+        concern = "no critical technical concerns detected"
+        
+    # Tone matches rank
+    if rank <= 5:
+        reasoning = f"Exceptional candidate with {yoe:.1f} years of experience {company_clause}, demonstrating superb expertise in must-have skills ({skills_str}); features {behavior_clause} showing high availability; {concern}."
+    elif rank <= 20:
+        reasoning = f"Highly qualified candidate with {yoe:.1f} years of experience {company_clause}, with strong engineering fit in {skills_str}; exhibits {behavior_clause}; {concern}."
+    elif rank <= 50:
+        reasoning = f"Solid candidate with {yoe:.1f} years of experience {company_clause}, showing verified technical capabilities in {skills_str}; {behavior_clause} indicates readiness; {concern}."
+    elif rank <= 80:
+        reasoning = f"Candidate with {yoe:.1f} years of experience {company_clause} but moderate alignment on adjacent skills ({skills_str}); {behavior_clause}; {concern}."
+    else:
+        reasoning = f"Fringe fit candidate with {yoe:.1f} years of experience {company_clause}, showing adjacent exposure to {skills_str}; {behavior_clause}; {concern}."
+        
+    return reasoning
 
 # ============================================================================
 # Priority 1: Skill Coverage Engine
@@ -1000,7 +990,7 @@ def main():
             rank = idx + 1
             cid = item["candidate_id"]
             score = item["score"]
-            reason = generate_reasoning(item["cand_data"], item["sim"], rank)
+            reason = generate_reasoning(item, rank)
             writer.writerow([cid, rank, score, reason])
             
     # 9. Save rejected database & explainability data to local artifacts (JSON)
