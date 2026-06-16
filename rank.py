@@ -1009,7 +1009,7 @@ def main():
         sys.exit(1)
         
     try:
-        target = model_dir if os.path.exists(model_dir) else "sentence-transformers/all-MiniLM-L-6-v2"
+        target = model_dir if os.path.exists(model_dir) else "sentence-transformers/all-MiniLM-L6-v2"
         tokenizer = AutoTokenizer.from_pretrained(target)
         model = AutoModel.from_pretrained(target)
         torch.set_num_threads(4)

@@ -1813,7 +1813,7 @@ def find_similar_candidates(selected_item, shortlist):
 
 @st.cache_resource
 def load_ml_resources():
-    target = model_dir if os.path.exists(model_dir) else "sentence-transformers/all-MiniLM-L-6-v2"
+    target = model_dir if os.path.exists(model_dir) else "sentence-transformers/all-MiniLM-L6-v2"
     try:
         tokenizer = AutoTokenizer.from_pretrained(target)
         model = AutoModel.from_pretrained(target)
