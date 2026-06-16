@@ -2262,6 +2262,19 @@ def load_antigravity_profiles():
             
     profiles = {}
     
+    # 0. Try to load from shortlist_profiles.json (pre-extracted for Streamlit Cloud deployment)
+    shortlist_json_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "Dataset", "shortlist_profiles.json")
+    if os.path.exists(shortlist_json_path):
+        try:
+            with open(shortlist_json_path, "r", encoding="utf-8") as f:
+                shortlist_data = json.load(f)
+                for cand in shortlist_data:
+                    cid = cand.get("candidate_id")
+                    if cid in csv_ids:
+                        profiles[cid] = cand
+        except Exception as e:
+            pass
+    
     # 1. Try to look up in the global `candidates` list
     if "candidates" in globals():
         global_candidates = globals()["candidates"]
