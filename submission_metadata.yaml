@@ -4,7 +4,7 @@
 # ============================================================================
 # Team identity
 # ============================================================================
-team_name: "TitanForge AI"  # Update with your registered team name
+team_name: "Antigravity Recruiter"  # Update with your registered team name
 
 primary_contact:
   name: "Ayusman Das"
@@ -20,10 +20,10 @@ team_members:
 # ============================================================================
 # Code and reproducibility
 # ============================================================================
-github_repo: "https://github.com/YOUR_USERNAME/redrob-candidate-ranker"
+github_repo: "https://github.com/ayusmandas2026/talentlens-candidate-ranker"
 # Must be reachable. Private repos OK if you can grant organizer access at Stage 3.
 
-sandbox_link: "https://huggingface.co/spaces/YOUR_USERNAME/redrob-candidate-ranker"
+sandbox_link: "https://talentlens-candidate-ranker-6xy4pfwkyfcbnraoaekzpj.streamlit.app"
 # A working hosted environment where the ranker can be run on a small candidate sample.
 
 reproduce_command: "python rank.py --candidates ./Dataset/candidates.jsonl --out ./team_submission.csv"
