@@ -1,6 +1,6 @@
-# TitanForge AI — Intelligent Candidate Discovery & Ranking Engine
+# TalentLens Recruiter — Intelligent Candidate Discovery & Ranking Engine
 
-This repository contains the complete, production-grade source code for **TitanForge AI**, a hybrid candidate search and ranking engine built for the Redrob AI Recruiter Challenge.
+This repository contains the complete, production-grade source code for **TalentLens Recruiter**, a hybrid candidate search and ranking engine built for the Redrob AI Recruiter Challenge.
 
 Our system is designed to identify the best-fit candidates for the **Senior AI Engineer — Founding Team** role from a pool of 100,000 candidates, running completely offline and within CPU constraints in less than 1 minute.
 
@@ -72,11 +72,13 @@ python validate_submission.py team_titanforgeai.csv
 It should return: `Submission is valid.`
 
 ### Run Sandbox App
-To run the interactive Streamlit sandbox application locally:
+The interactive Streamlit sandbox application is deployed live at: **[talentlens-candidate-ranker.streamlit.app](https://talentlens-candidate-ranker.streamlit.app/)**
+
+To run it locally:
 ```bash
 streamlit run app.py
 ```
-This opens the browser dashboard where you can upload a sample of candidates, inspect their attributes, run the ranker, and download the resulting CSV.
+This opens the browser dashboard where you can inspect candidate attributes, run the ranker, and download the resulting CSV.
 
 ---
 
@@ -92,3 +94,4 @@ This opens the browser dashboard where you can upload a sample of candidates, in
 * `Dataset/`:
   - `honeypot_blacklist.json`: Extracted blacklist of the 2,418 honeypot candidate IDs.
   - `sample_candidates.json`: Default sample of 50 candidates for sandbox testing.
+  - `shortlist_profiles.json`: Pre-extracted profiles of the 100 shortlisted candidates for sandbox speed and remote deployment capability.
