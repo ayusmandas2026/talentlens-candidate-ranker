@@ -1009,8 +1009,9 @@ def main():
         sys.exit(1)
         
     try:
-        tokenizer = AutoTokenizer.from_pretrained(model_dir)
-        model = AutoModel.from_pretrained(model_dir)
+        target = model_dir if os.path.exists(model_dir) else "sentence-transformers/all-MiniLM-L-6-v2"
+        tokenizer = AutoTokenizer.from_pretrained(target)
+        model = AutoModel.from_pretrained(target)
         torch.set_num_threads(4)
     except Exception as e:
         print(f"Failed to load model from disk: {e}")

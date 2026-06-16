@@ -1813,11 +1813,10 @@ def find_similar_candidates(selected_item, shortlist):
 
 @st.cache_resource
 def load_ml_resources():
-    if not os.path.exists(model_dir):
-        return None, None
+    target = model_dir if os.path.exists(model_dir) else "sentence-transformers/all-MiniLM-L-6-v2"
     try:
-        tokenizer = AutoTokenizer.from_pretrained(model_dir)
-        model = AutoModel.from_pretrained(model_dir)
+        tokenizer = AutoTokenizer.from_pretrained(target)
+        model = AutoModel.from_pretrained(target)
         return tokenizer, model
     except Exception as e:
         st.error(f"Error loading model: {e}")
