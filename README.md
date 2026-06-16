@@ -58,11 +58,15 @@ This saves the model files under `./model/` for 100% offline execution.
 ## 3. How to Run (Reproducibility)
 
 ### Generate submission CSV
-To run the ranker on the full pool of candidates (replace candidate path with your actual path):
+To run the ranker on the full pool of candidates (replace the path with your actual `candidates.jsonl` filepath):
 ```bash
-python rank.py --candidates "C:\Users\ayusm\Downloads\extracted_challenge\[PUB] India_runs_data_and_ai_challenge\India_runs_data_and_ai_challenge\candidates.jsonl" --out ./team_titanforgeai.csv
+python rank.py --candidates "C:\Users\ayusm\Downloads\extracted_challenge\[PUB] India_runs_data_and_ai_challenge\India_runs_data_and_ai_challenge\candidates.jsonl" --out ./team_titanforgeai.csv --mode hybrid
 ```
 This runs end-to-end in **~41 seconds** on CPU.
+
+#### Supported Ranking Modes (`--mode`):
+* **`hybrid`** (Default): Combines Stage 1 regex screening heuristics and Stage 2 SBERT semantic cosine similarities using hand-tuned weights for high transparency and speed.
+* **`ltr`**: Learning-to-Rank mode. Extracts features (SBERT semantic cosine similarity, specific skills match, production readiness, experience, notice period, location, and education tier scores), trains a GBDT model (`XGBoost`) on pseudo-relevance labels generated from the hybrid ranking, and re-ranks the candidates based on predicted relevance scores.
 
 ### Validate Submission Format
 To verify that the output meets all submission requirements:
