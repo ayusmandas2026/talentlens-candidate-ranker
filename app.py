@@ -1724,7 +1724,7 @@ def get_contribution_bar_chart(item, w_sem, w_sk, w_prod, w_ai, w_beh, w_yoe, w_
     )
     return fig
 
-def render_benchmark_charts():
+def render_benchmark_charts(current_pipeline="Hybrid Weighted"):
     categories = ["Traditional ATS", "Semantic Matching", "Hybrid Weighted (System)", "Learning-to-Rank"]
     
     ndcg_scores = [0.35, 0.68, 0.89, 0.94]
@@ -1758,14 +1758,21 @@ def render_benchmark_charts():
         xaxis=dict(color="#64748b"),
         yaxis=dict(color="#64748b", gridcolor="#e2e8f0")
     )
+    
+    # Position the current system star annotation dynamically
+    is_ltr = "Learning-to-Rank" in current_pipeline
+    ann_x = 0.93 if is_ltr else 0.58
+    ann_color = "#818cf8" if is_ltr else "#4f46e5"
+    ann_bg = "rgba(129, 140, 248, 0.15)" if is_ltr else "rgba(79, 70, 229, 0.15)"
+    
     fig.add_annotation(
         text="<b>★ Current System</b>",
         xref="paper", yref="paper",
-        x=0.58, y=0.95,
+        x=ann_x, y=0.95,
         showarrow=False,
-        font=dict(size=11, color="#4f46e5"),
-        bgcolor="rgba(79, 70, 229, 0.15)",
-        bordercolor="#4f46e5",
+        font=dict(size=11, color=ann_color),
+        bgcolor=ann_bg,
+        bordercolor=ann_color,
         borderwidth=1.5,
         borderpad=4,
         align="center"
@@ -3590,39 +3597,70 @@ with tab7:
     st.subheader("Algorithm Benchmarking Page")
     st.markdown("Visual comparison of Traditional keyword search vs Transformer semantic search vs Hybrid vs Learning-to-Rank.")
     
-    st.plotly_chart(render_benchmark_charts(), use_container_width=True)
+    current_pipeline = st.session_state.get("pipeline_selection", "Hybrid Weighted")
+    st.plotly_chart(render_benchmark_charts(current_pipeline), use_container_width=True)
     
-    # Textual comparison grid
-    st.markdown("<table style='width:100%; border-collapse:collapse; color:#334155; font-size:14px; text-align:left; font-family:Inter, sans-serif;'>"
-                "<tr style='border-bottom:2px solid #e2e8f0; color:#1a1a2e; font-weight:600;'>"
-                "<th style='padding:12px;'>Metric</th>"
-                "<th style='padding:12px;'>Traditional ATS</th>"
-                "<th style='padding:12px;'>Semantic Search</th>"
-                "<th style='padding:12px; border: 2.5px solid #4f46e5; background-color: rgba(79, 70, 229, 0.05); color: #4f46e5; font-weight:700; border-radius: 8px 8px 0 0;'>Hybrid Weighted (★ Current System)</th>"
-                "<th style='padding:12px;'>Learning-to-Rank</th>"
-                "</tr>"
-                "<tr style='border-bottom:1px solid #e2e8f0;'>"
-                "<td style='padding:10px; font-weight:600; color:#1a1a2e;'>Search Capability</td>"
-                "<td style='padding:10px;'>Exact substring keywords only</td>"
-                "<td style='padding:10px;'>Contextual synonyms</td>"
-                "<td style='padding:10px; border-left: 2.5px solid #4f46e5; border-right: 2.5px solid #4f46e5; background-color: rgba(79, 70, 229, 0.05); font-weight: 500;'>Synonyms + Skills scoring</td>"
-                "<td style='padding:10px;'>Multivariate GBDT predictions</td>"
-                "</tr>"
-                "<tr style='border-bottom:1px solid #e2e8f0;'>"
-                "<td style='padding:10px; font-weight:600; color:#1a1a2e;'>Explainability</td>"
-                "<td style='padding:10px; color:#dc2626; font-weight:500;'>None (Match / No Match)</td>"
-                "<td style='padding:10px; color:#d97706; font-weight:500;'>Latent vector similarities</td>"
-                "<td style='padding:10px; border-left: 2.5px solid #4f46e5; border-right: 2.5px solid #4f46e5; background-color: rgba(79, 70, 229, 0.05); color:#16a34a; font-weight:600;'>Strengths/Weaknesses checks</td>"
-                "<td style='padding:10px; color:#16a34a; font-weight:500;'>Feature contributions</td>"
-                "</tr>"
-                "<tr style='border-bottom:1px solid #e2e8f0;'>"
-                "<td style='padding:10px; font-weight:600; color:#1a1a2e;'>Honeypot Traps Security</td>"
-                "<td style='padding:10px; color:#dc2626; font-weight:500;'>0% blocked</td>"
-                "<td style='padding:10px; color:#dc2626; font-weight:500;'>0% blocked (easily spoofed)</td>"
-                "<td style='padding:10px; border-left: 2.5px solid #4f46e5; border-right: 2.5px solid #4f46e5; border-bottom: 2.5px solid #4f46e5; background-color: rgba(79, 70, 229, 0.05); color:#16a34a; font-weight:600; border-radius: 0 0 8px 8px;'>100% blocked (Blacklist)</td>"
-                "<td style='padding:10px; color:#16a34a; font-weight:500;'>100% blocked (Subtractive)</td>"
-                "</tr>"
-                "</table>", unsafe_allow_html=True)
+    # Textual comparison grid (dynamically highlights the active pipeline)
+    is_ltr = "Learning-to-Rank" in current_pipeline
+    
+    # Styling for Hybrid column
+    h_th_style = "padding:12px;"
+    h_td_style = "padding:10px;"
+    h_td_exp_style = "padding:10px; color:#16a34a; font-weight:500;"
+    h_td_sec_style = "padding:10px; color:#16a34a; font-weight:500;"
+    if not is_ltr:
+        h_th_style = "padding:12px; border: 2.5px solid #4f46e5; background-color: rgba(79, 70, 229, 0.05); color: #4f46e5; font-weight:700; border-radius: 8px 8px 0 0;"
+        h_td_style = "padding:10px; border-left: 2.5px solid #4f46e5; border-right: 2.5px solid #4f46e5; background-color: rgba(79, 70, 229, 0.05); font-weight: 500;"
+        h_td_exp_style = "padding:10px; border-left: 2.5px solid #4f46e5; border-right: 2.5px solid #4f46e5; background-color: rgba(79, 70, 229, 0.05); color:#16a34a; font-weight:600;"
+        h_td_sec_style = "padding:10px; border-left: 2.5px solid #4f46e5; border-right: 2.5px solid #4f46e5; border-bottom: 2.5px solid #4f46e5; background-color: rgba(79, 70, 229, 0.05); color:#16a34a; font-weight:600; border-radius: 0 0 8px 8px;"
+        
+    # Styling for LTR column
+    l_th_style = "padding:12px;"
+    l_td_style = "padding:10px;"
+    l_td_exp_style = "padding:10px; color:#16a34a; font-weight:500;"
+    l_td_sec_style = "padding:10px; color:#16a34a; font-weight:500;"
+    if is_ltr:
+        l_th_style = "padding:12px; border: 2.5px solid #818cf8; background-color: rgba(129, 140, 248, 0.05); color: #818cf8; font-weight:700; border-radius: 8px 8px 0 0;"
+        l_td_style = "padding:10px; border-left: 2.5px solid #818cf8; border-right: 2.5px solid #818cf8; background-color: rgba(129, 140, 248, 0.05); font-weight: 500;"
+        l_td_exp_style = "padding:10px; border-left: 2.5px solid #818cf8; border-right: 2.5px solid #818cf8; background-color: rgba(129, 140, 248, 0.05); color:#16a34a; font-weight:600;"
+        l_td_sec_style = "padding:10px; border-left: 2.5px solid #818cf8; border-right: 2.5px solid #818cf8; border-bottom: 2.5px solid #818cf8; background-color: rgba(129, 140, 248, 0.05); color:#16a34a; font-weight:600; border-radius: 0 0 8px 8px;"
+
+    h_title = "Hybrid Weighted (★ Current System)" if not is_ltr else "Hybrid Weighted"
+    l_title = "Learning-to-Rank (★ Current System)" if is_ltr else "Learning-to-Rank"
+
+    html_table = f"""
+    <table style='width:100%; border-collapse:collapse; color:#334155; font-size:14px; text-align:left; font-family:Inter, sans-serif;'>
+        <tr style='border-bottom:2px solid #e2e8f0; color:#1a1a2e; font-weight:600;'>
+            <th style='padding:12px;'>Metric</th>
+            <th style='padding:12px;'>Traditional ATS</th>
+            <th style='padding:12px;'>Semantic Search</th>
+            <th style='{h_th_style}'>{h_title}</th>
+            <th style='{l_th_style}'>{l_title}</th>
+        </tr>
+        <tr style='border-bottom:1px solid #e2e8f0;'>
+            <td style='padding:10px; font-weight:600; color:#1a1a2e;'>Search Capability</td>
+            <td style='padding:10px;'>Exact substring keywords only</td>
+            <td style='padding:10px;'>Contextual synonyms</td>
+            <td style='{h_td_style}'>Synonyms + Skills scoring</td>
+            <td style='{l_td_style}'>Multivariate GBDT predictions</td>
+        </tr>
+        <tr style='border-bottom:1px solid #e2e8f0;'>
+            <td style='padding:10px; font-weight:600; color:#1a1a2e;'>Explainability</td>
+            <td style='padding:10px; color:#dc2626; font-weight:500;'>None (Match / No Match)</td>
+            <td style='padding:10px; color:#d97706; font-weight:500;'>Latent vector similarities</td>
+            <td style='{h_td_exp_style}'>Strengths/Weaknesses checks</td>
+            <td style='{l_td_exp_style}'>Feature contributions</td>
+        </tr>
+        <tr style='border-bottom:1px solid #e2e8f0;'>
+            <td style='padding:10px; font-weight:600; color:#1a1a2e;'>Honeypot Traps Security</td>
+            <td style='padding:10px; color:#dc2626; font-weight:500;'>0% blocked</td>
+            <td style='padding:10px; color:#dc2626; font-weight:500;'>0% blocked (easily spoofed)</td>
+            <td style='{h_td_sec_style}'>100% blocked (Blacklist)</td>
+            <td style='{l_td_sec_style}'>100% blocked (Subtractive)</td>
+        </tr>
+    </table>
+    """
+    st.markdown(clean_html(html_table), unsafe_allow_html=True)
 
 # ============================================================================
 # Tab 7: System Configuration & Demo Mode (Priority 12 Presentation Mode)
